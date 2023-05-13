@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script for a fast note capture on the obsidian vault
+#Script for a fast note capture on the obsidian vault 
 
 # Check if both arguments are provided
 if [ $# -ne 1 ]; then
