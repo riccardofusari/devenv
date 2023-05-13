@@ -4,6 +4,6 @@ Hey there! Welcome to my repo for practicing, where I keep all the code I write.
 At the moment, here are the main topics I'm covering:
 
 - SystemVerilog verification
-- Scripting
 - VHDL design
+- Scripting
 - C programming
