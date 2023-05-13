@@ -1,4 +1,5 @@
 #!/bin/sh
+# Script for shut down the computer
 
 cd ~;
 
