@@ -1,0 +1,37 @@
+#!/bin/sh
+
+cd ~;
+
+echo ""
+echo "Updating.."
+sudo apt update -y 
+
+echo ""
+echo "Upgrading.."
+sudo apt upgrade -y 
+
+echo ""
+echo "Cleaning.."
+sudo apt autoclean -y
+
+echo ""
+echo "Removing.."
+sudo apt autoremove -y
+
+echo ""
+echo "Cleaning again.."
+sudo apt clean -y
+
+echo ""
+echo "Git Sync obsidian"
+cd /home/riccardo/git/vaults;
+gitsync
+
+echo ""
+echo "Git Sync til"
+cd /home/riccardo/git/til;
+gitsync
+
+echo ""
+echo "Shutdown Complete. Goodbye!"
+sudo shutdown now
