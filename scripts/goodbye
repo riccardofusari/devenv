@@ -33,5 +33,10 @@ cd /home/riccardo/git/til;
 gitsync
 
 echo ""
+echo "Git Sync developed code"
+cd /home/riccardo/git/devenv;
+gitsync
+
+echo ""
 echo "Shutdown Complete. Goodbye!"
-sudo shutdown now
+#sudo shutdown now
