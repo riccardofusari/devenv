@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Script for a fast tech-note capture  
+
+# Check if both arguments are provided
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <name of the note>"
+  exit 1
+fi
+
+#Get the name
+name=$1
+
+cd /home/riccardo/git/til/fleetingnotes;
+
+touch ${name}.md;
+
+nano ${name}.md;
+
