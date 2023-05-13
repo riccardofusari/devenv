@@ -1,0 +1,117 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'REGISTER_FILE_WINDOWING' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : REGISTER_FILE_WINDOWING
+Version: S-2021.06-SP4
+Date   : Thu May  4 17:26:21 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: i_reg[2] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: OUT1_reg[36]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  REGISTER_FILE_WINDOWING
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i_reg[2]/CK (DFF_X1)                                    0.00 #     0.00 r
+  i_reg[2]/Q (DFF_X1)                                     0.09       0.09 r
+  U11237/ZN (AND4_X1)                                     0.06       0.15 r
+  U11242/ZN (AND4_X1)                                     0.06       0.21 r
+  U16021/ZN (NAND2_X1)                                    0.03       0.23 f
+  U11249/ZN (AND3_X1)                                     0.05       0.29 f
+  U16419/ZN (AOI211_X1)                                   0.08       0.37 r
+  U16420/ZN (OAI211_X1)                                   0.05       0.42 f
+  r235/B[2] (REGISTER_FILE_WINDOWING_DW01_addsub_2)       0.00       0.42 f
+  r235/U249/ZN (XNOR2_X1)                                 0.06       0.48 f
+  r235/U291/ZN (INV_X1)                                   0.03       0.51 r
+  r235/U203/ZN (NAND2_X1)                                 0.03       0.54 f
+  r235/U237/ZN (NAND2_X1)                                 0.03       0.57 r
+  r235/U235/ZN (OAI211_X1)                                0.03       0.60 f
+  r235/U244/ZN (NAND2_X1)                                 0.04       0.64 r
+  r235/U28/ZN (OR2_X1)                                    0.04       0.68 r
+  r235/U234/ZN (NAND2_X1)                                 0.03       0.71 f
+  r235/U23/ZN (AND2_X1)                                   0.04       0.75 f
+  r235/U49/ZN (OAI21_X1)                                  0.05       0.80 r
+  r235/U241/ZN (NAND2_X1)                                 0.03       0.83 f
+  r235/U233/ZN (NAND2_X1)                                 0.03       0.86 r
+  r235/U232/ZN (XNOR2_X1)                                 0.06       0.92 r
+  r235/SUM[7] (REGISTER_FILE_WINDOWING_DW01_addsub_2)     0.00       0.92 r
+  U11141/ZN (AND2_X1)                                     0.06       0.97 r
+  r233/B[7] (REGISTER_FILE_WINDOWING_DW01_add_0)          0.00       0.97 r
+  r233/U227/ZN (NAND2_X1)                                 0.04       1.01 f
+  r233/U222/ZN (OAI21_X1)                                 0.03       1.04 r
+  r233/U271/ZN (INV_X1)                                   0.03       1.07 f
+  r233/U96/ZN (OAI21_X1)                                  0.04       1.11 r
+  r233/U230/ZN (NAND2_X1)                                 0.03       1.14 f
+  r233/U75/ZN (AND2_X1)                                   0.04       1.18 f
+  r233/U68/ZN (OAI21_X1)                                  0.05       1.23 r
+  r233/U37/ZN (XNOR2_X1)                                  0.06       1.29 r
+  r233/SUM[10] (REGISTER_FILE_WINDOWING_DW01_add_0)       0.00       1.29 r
+  U16302/ZN (INV_X1)                                      0.03       1.31 f
+  U16303/ZN (OAI22_X1)                                    0.05       1.37 r
+  r268/B[10] (REGISTER_FILE_WINDOWING_DW01_cmp6_0)        0.00       1.37 r
+  r268/U147/ZN (INV_X1)                                   0.03       1.39 f
+  r268/U143/ZN (NAND2_X1)                                 0.03       1.42 r
+  r268/U67/ZN (NAND3_X1)                                  0.04       1.46 f
+  r268/U142/ZN (OAI221_X1)                                0.03       1.49 r
+  r268/U65/ZN (NAND3_X1)                                  0.04       1.53 f
+  r268/U41/ZN (NAND2_X1)                                  0.03       1.56 r
+  r268/U20/ZN (NAND2_X1)                                  0.02       1.58 f
+  r268/U50/ZN (NAND3_X1)                                  0.03       1.61 r
+  r268/U22/ZN (NAND2_X1)                                  0.03       1.64 f
+  r268/U32/ZN (NAND2_X1)                                  0.03       1.66 r
+  r268/U40/ZN (NAND2_X1)                                  0.02       1.69 f
+  r268/U36/ZN (NAND2_X1)                                  0.03       1.71 r
+  r268/U57/ZN (NAND3_X1)                                  0.03       1.74 f
+  r268/U31/ZN (NAND2_X1)                                  0.03       1.77 r
+  r268/U55/ZN (NAND3_X1)                                  0.03       1.80 f
+  r268/U53/ZN (NAND3_X1)                                  0.03       1.83 r
+  r268/U39/ZN (NAND2_X1)                                  0.03       1.86 f
+  r268/U37/ZN (NAND2_X1)                                  0.03       1.88 r
+  r268/U28/ZN (NAND2_X1)                                  0.02       1.91 f
+  r268/U26/ZN (NAND2_X1)                                  0.03       1.93 r
+  r268/U151/ZN (AOI22_X1)                                 0.04       1.97 f
+  r268/U129/ZN (OAI22_X1)                                 0.07       2.04 r
+  r268/LT (REGISTER_FILE_WINDOWING_DW01_cmp6_0)           0.00       2.04 r
+  U11281/ZN (AND3_X1)                                     0.09       2.13 r
+  U12853/ZN (AND2_X1)                                     0.06       2.19 r
+  U17702/ZN (NAND2_X1)                                    0.03       2.22 f
+  U15978/ZN (INV_X1)                                      0.05       2.27 r
+  U11297/Z (BUF_X2)                                       0.07       2.34 r
+  U11329/ZN (AND2_X1)                                     0.05       2.40 r
+  U11331/ZN (NOR3_X1)                                     0.02       2.42 f
+  U18280/ZN (NAND4_X1)                                    0.04       2.46 r
+  OUT1_reg[36]/D (DFF_X1)                                 0.01       2.47 r
+  data arrival time                                                  2.47
+
+  clock CLK (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  OUT1_reg[36]/CK (DFF_X1)                                0.00       2.50 r
+  library setup time                                     -0.03       2.47
+  data required time                                                 2.47
+  --------------------------------------------------------------------------
+  data required time                                                 2.47
+  data arrival time                                                 -2.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

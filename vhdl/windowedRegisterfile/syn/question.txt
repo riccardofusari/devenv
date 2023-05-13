@@ -1,0 +1,15 @@
+########################################################
+            Question 3
+########################################################
+
+In the first synthesis, the register's most critical path was lower 
+than the constraint, which means that the design met the timing requirements. 
+However, with the windowed register file, the complexity of the design 
+increased as expected, which also increased the most critical path. 
+As a result, with a constraint on the clock of 2 ns, there is a negative slack, 
+which means that the timing requirements are violated. In other words, 
+the design is not meeting the timing requirements, and the clock period needs 
+to be increased to allow for the slower path. This can be achieved by either 
+optimizing the design to reduce the critical path delay or by increasing the 
+clock period to meet the timing requirements. We chose to do the latter by
+increasing the clock constaint to 2.5 ns. 

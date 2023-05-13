@@ -1,0 +1,32 @@
+#################################################################
+QUESTION 1
+#################################################################
+
+In the first report, the shown path is from the output of the flip-flop 
+to the output of the register file, without the clock. By adding the clock,
+we can see that the path starts from one of the registers in the register
+file and goes through the entire architecture until the output.
+
+The report indicates that setting the clock to 2 ns places a constraint on
+the time that is higher than the data arrival time of 0.40 ns from the synthesys tool. 
+The parameter "clock network delay" refers to the time it takes for the clock signal 
+to propagate from the clock source to the clock input of the flip-flop in the 
+design. In our case, it is 0.00 ns, which means that an ideal clock signal 
+is assumed to be used in the analysis.
+
+Overall, the critical path is determined by the slowest elements of the circuit, 
+which in this case are the combinational logic cells that make up the majority 
+of the path delay. It is important to ensure that the critical path is optimized 
+to meet timing requirements and avoid violations.
+
+##################################################################
+QUESTION 2
+##################################################################
+
+Even if the time constraint given by the clock should affect only the
+combinational paths between two consecutive registers, we can see that
+also the paths between the output registers and the output of the whole
+architecture try to meet the constraint as reported also in the timing
+report. This is probably due to the fact that our architecture is described
+in a behavioral way, allowing the synthesis of the register file in a slightly 
+different way from the one that we expected.

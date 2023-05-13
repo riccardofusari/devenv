@@ -1,0 +1,21 @@
+At the start of the simulation, it can be observed that no read or write operations 
+are performed. This is because the RESET signal is asserted high, and the enable signal 
+is low. After the enable signal is asserted high and RESET is low, the first read 
+operation is carried out on registers 22 and 28. However, since these registers have 
+not been previously written, the output remains at zero.
+
+At 6ns, the register 8 is written in the following rising edge of the clock (6.5ns),
+as WR is set to '1'.
+
+At 10ns, WR is set to '1', but since ENABLE is '0', no write operation is performed.
+
+At 15ns, both the WRITE and READ1 signals are asserted high, with REG 24 being written 
+and REG 8 being read. It can be observed that in the next clock cycle, both the output 
+and register 24 are updated.
+
+Another important behavior to highlight is at 35ns, where both the READ2 and WRITE 
+signals are asserted high, with ADD_WR and ADD_RD2 set to 1E. In this case(as stated 
+in the register file comment), the read operation will read the previous value stored 
+in the register and forward it to the output, while the write operation is being 
+performed. In the following clock cycle, the corresponding value will be available 
+at the output2.

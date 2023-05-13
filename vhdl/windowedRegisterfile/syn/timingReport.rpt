@@ -1,0 +1,38 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : REGISTER_FILE_WINDOWING
+Version: S-2021.06-SP4
+Date   : Thu May  4 17:23:37 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: MEM_BUS_reg[63]
+              (rising edge-triggered flip-flop)
+  Endpoint: MEM_BUS[63]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  REGISTER_FILE_WINDOWING
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  MEM_BUS_reg[63]/CK (DFF_X1)              0.00       0.00 r
+  MEM_BUS_reg[63]/Q (DFF_X1)               0.10       0.10 r
+  MEM_BUS[63] (out)                        0.00       0.10 r
+  data arrival time                                   0.10
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

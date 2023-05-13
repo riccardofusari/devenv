@@ -1,0 +1,46 @@
+##################################################################
+#SCRIPT FOR SPEEDING UP and RECORDING the REGISTER FILE SYNTHESIS#
+##################################################################
+
+analyze -library WORK -format vhdl {constants.vhd registerfile.vhd}
+
+##############################################################
+
+elaborate REGISTER_FILE -architecture BEHAVIORAL -library WORK
+
+##########################################
+
+# first compilation, without constraints 
+
+compile -exact_map
+
+
+# reporting TIMING and AREA after the first synthesis without constraints 
+
+report_timing > timing_noOpt.rpt
+report_area > area_noOpt.rpt
+
+##################################################
+#Clock generation
+#################################################
+
+create_clock -name "CLK" -period 2 CLK
+report_clock
+
+compile
+
+#timing report with clock
+report_timing > timing_clock.rpt
+
+# forces a combinational max delay of REQUIRED_TIME
+set_max_delay 2 -from [all_inputs] -to [all_outputs]
+
+# optimize
+compile -map_effort high
+
+# save report
+report_timing > timing_Opt.rpt
+report_area > area_Opt.rpt
+
+# saving files
+write -hierarchy -format vhdl -output PostSynthRegFile.vhdl

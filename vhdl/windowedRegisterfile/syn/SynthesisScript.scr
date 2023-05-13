@@ -1,0 +1,31 @@
+# Analyze the VHDL files 'constants.vhd' and 'registerfileWindowing.vhd' in the WORK library
+analyze -library WORK -format vhdl {constants.vhd registerfileWindowing.vhd}
+
+# Elaborate the REGISTER_FILE_WINDOWING entity using the BEHAVIORAL architecture in the WORK library
+elaborate REGISTER_FILE_WINDOWING -architecture BEHAVIORAL -library WORK
+
+# Compile the design using exact mapping
+compile -exact_map
+
+# Generate a timing report without constraints
+report_timing > timingReport.rpt
+
+<<<<<<< HEAD
+#Clock creation
+
+create_clock -name "CLK" -period 2.5 CLK
+=======
+# Create a clock named 'CLK' with a period of 2ns
+create_clock -name "CLK" -period 2.5 CLK
+# Report the properties of the clock just created
+>>>>>>> 049b361123be14b974f67e0ae5322de3c201a22b
+report_clock
+
+# Compile the design again after clock creation
+compile
+
+# Generate a timing report with clock constraints
+report_timing > timingReportWithclock.rpt
+
+# Write the post-synthesis VHDL netlist to the file 'PostSynthRegFileWindowing.vhdl'
+write -hierarchy -format vhdl -output PostSynthRegFileWindowing.vhdl
