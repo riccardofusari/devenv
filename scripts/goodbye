@@ -39,4 +39,4 @@ gitsync
 
 echo ""
 echo "Shutdown Complete. Goodbye!"
-#sudo shutdown now
+sudo shutdown now

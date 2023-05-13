@@ -1,0 +1,14 @@
+echo ""
+echo "Git Sync obsidian"
+cd /home/riccardo/git/vaults;
+gitsync
+
+echo ""
+echo "Git Sync til"
+cd /home/riccardo/git/til;
+gitsync
+
+echo ""
+echo "Git Sync developed code"
+cd /home/riccardo/git/devenv;
+gitsync
