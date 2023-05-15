@@ -1,0 +1,27 @@
+#!/bin/bash
+
+thunderbird & 
+
+sleep 1 
+
+obsidian & 
+
+sleep 1
+
+code ~/git/ &
+
+sleep 1
+
+pomatez &
+
+sleep 1
+
+gnome-calendar &
+
+sleep 1 
+
+spotify 
+
+sleep 1
+
+exit
