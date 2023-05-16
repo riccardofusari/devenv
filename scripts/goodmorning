@@ -16,11 +16,11 @@ pomatez &
 
 sleep 1
 
-gnome-calendar &
+morgen &
 
 sleep 1 
 
-spotify 
+spotify &
 
 sleep 1
 
