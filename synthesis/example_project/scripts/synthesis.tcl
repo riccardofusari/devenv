@@ -78,6 +78,7 @@ elaborate -lib $blockName $blockName
 ## DEFINE DESIGN ENVIRONMENT
 ##
 ######################################################################
+#: "[lindex ${target:library} 0 ] CORE65LPLVT" NOM_1.20V.25C
 set_operating_condition -library  "${target_library}:CORE65LPSVT" nom_1.20V_25C
 set_wire_load_model -library "${target_library}:CORE65LPSVT" -name area_12Kto18K [find design *]
 set_load 0.05 [all_outputs]
