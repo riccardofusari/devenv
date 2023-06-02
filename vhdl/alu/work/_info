@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/riccardo/git/devenv/vhdl/alu
+Ealu
+Z1 w1685715284
+Z2 DPx4 work 8 alu_type 0 22 m>kSleTFlPn^>d@7?fQeN3
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z8 8alu_1.vhd
+Z9 Falu_1.vhd
+l0
+L21 1
+VQLOXRR>8KV:e8nFWZ>@];2
+!s100 4KXCGIiSA;VXAJ:4a<_B:0
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1685715435
+!i10b 1
+Z12 !s108 1685715435.000000
+Z13 !s90 alu_1.vhd|
+Z14 !s107 alu_1.vhd|
+!i113 1
+Z15 tOptimize_1164 0 Explicit 1 CvgOpt 0
+Abehavioural
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 alu 0 22 QLOXRR>8KV:e8nFWZ>@];2
+!i122 1
+l34
+L33 54
+V_A5fSned7R]BHh93Gg40M1
+!s100 M02M3Z9Vhm[D;D2kC7Y4Y2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+Palu_type
+!i122 0
+w1685714881
+R0
+8alu_type.vhd
+Falu_type.vhd
+l0
+L1 1
+Vm>kSleTFlPn^>d@7?fQeN3
+!s100 U9k]R[ohhBYzaj<[FTjJ90
+R10
+32
+!s110 1685715434
+!i10b 1
+!s108 1685715434.000000
+!s90 alu_type.vhd|
+!s107 alu_type.vhd|
+!i113 1
+R15
+Etbalu
+Z16 w1685715433
+R2
+R4
+R5
+R6
+R7
+!i122 2
+R0
+Z17 8tb_alu.vhd
+Z18 Ftb_alu.vhd
+l0
+L9 1
+V541TehNf25>:Wccgg346U1
+!s100 B?9P4NC]HgVN4<k:>6BV]2
+R10
+32
+R11
+!i10b 1
+R12
+Z19 !s90 tb_alu.vhd|
+!s107 tb_alu.vhd|
+!i113 1
+R15
+Atest
+R2
+R4
+R5
+R6
+R7
+DEx4 work 5 tbalu 0 22 541TehNf25>:Wccgg346U1
+!i122 2
+l26
+L12 42
+V>BlDEldzI<i=4=aI`GU`73
+!s100 T4zX=^o?CAj:WcPFCZW320
+R10
+32
+R11
+!i10b 1
+R12
+R19
+Z20 !s107 tb_alu.vhd|
+!i113 1
+R15

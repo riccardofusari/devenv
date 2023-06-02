@@ -1,0 +1,28 @@
+# ERROR: No extended dataflow license exists
+# do dofile.do
+# vsim work.tbalu(test) -t 100ps -voptargs="+acc" 
+# Start time: 16:17:17 on Jun 02,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_type
+# Loading work.tbalu(test)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(behavioural)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tbalu/U1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tbalu/U1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tbalu/U1
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 16 (15 downto 0). Right is 9 (0 to 8).
+#    Time: 18 ns  Iteration: 0  Process: /tbalu/U1/P_ALU File: alu_1.vhd
+# Fatal error in Process P_ALU at alu_1.vhd line 71
+# 
+# HDL call sequence:
+# Stopped at alu_1.vhd 71 Process P_ALU
+# 
+# End time: 16:43:21 on Jun 02,2023, Elapsed time: 0:26:04
+# Errors: 1, Warnings: 3
