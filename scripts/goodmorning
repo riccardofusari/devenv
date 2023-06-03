@@ -12,11 +12,11 @@ code ~/git/ &
 
 sleep 1
 
-pomatez &
+ticktick &
 
 sleep 1
 
-morgen &
+#morgen &
 
 sleep 1 
 
