@@ -1,0 +1,12 @@
+As we expected, the ALU design is mostly combinational, with 379 of the 403 cells being combinational.
+Infact the ALU performs primarly combinational logic operations. The buffer/inverter area is relatively 
+small compared to the combinational area, which suggest that the design is not heavily reliant on buffering 
+or inverting signals. The noncombinational area is also relatively small, indicating that the ALU design 
+does not include a large amount of memory or other noncombinational components.
+
+The timing report shows that the data arrival time for the most critical path (from the startpoint OUTALU_reg[15] 
+to the endpoint OUTALU[15]) is 0.07, which means that the data will arrive at the output after a delay of 0.07 
+units of time. The path is unconstrained, which means that there are no timing constraints specified for this path. 
+The report also shows that the delay increment for the OUTALU_reg[15]/Q point was 0.07, which is the maximum delay 
+along this path. The delay increment for the OUTALU_reg[15]/G point was 0.00, which means that there was no delay 
+introduced at this point.
