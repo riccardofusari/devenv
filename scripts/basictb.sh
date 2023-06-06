@@ -24,7 +24,7 @@ fi
 local_folder="$1"
 remote_folder="/home/2023-socv-6/git/$2"
 remote_script="$3"
-output_file="pr.txt"
+output_file="report.log"
 
 #####################################################################################
 # SSH Settings
@@ -42,7 +42,7 @@ server_address="led-x3850-2.polito.it"
 # Sync local folder with server
 rsync -avz --delete -e "sshpass -p $ssh_password ssh -p $ssh_port" $local_folder/ $ssh_username@$server_address:$remote_folder/
 # Execute script on server and retrieve output file
-sshpass -p $ssh_password ssh -p $ssh_port  $ssh_username@$server_address "source /eda/scripts/init_questa_core_prime && cd $remote_folder && ./script.sh && cp $output_file ~"
-sshpass -p $ssh_password scp -P $ssh_port $ssh_username@$server_address:$remote_folder/$output_file $local_folder/
+sshpass -p $ssh_password ssh -p $ssh_port  $ssh_username@$server_address "source /eda/scripts/init_questa_core_prime && cd $remote_folder/sim && ./simulate.sh > $output_file "
+sshpass -p $ssh_password scp -P $ssh_port $ssh_username@$server_address:$remote_folder/sim/$output_file $local_folder/
 
 
