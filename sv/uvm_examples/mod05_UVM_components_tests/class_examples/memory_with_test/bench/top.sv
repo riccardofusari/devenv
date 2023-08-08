@@ -5,12 +5,13 @@ module top;
 
    memory_if mi();
    memory dut (mi.mem_mp);
-   
+
    initial begin
       memory_pkg::global_mif = mi;
-      run_test(); 
+      /*That method uses the factory of uvm*/
+      run_test();
    end
-   
+
 endmodule: top
 
 

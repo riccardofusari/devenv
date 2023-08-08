@@ -1,12 +1,18 @@
-class quiet_test extends uvm_test;
 
-   `uvm_component_utils(quiet_test)   
-    
+/* This class extends the uvm_test class which contains
+   all the methods like
+   - build
+   - run
+   - and others */
+
+class quiet_test extends uvm_test;
+   /* This macro tells to the Factory that there is a class that needs to know how to build */
+   `uvm_component_utils(quiet_test)
+
    virtual interface memory_if mif;
-   
+
    function new(string name, uvm_component parent);
       super.new(name, parent);
-      
    endfunction : new
 
    function void build_phase(uvm_phase phase);
@@ -27,7 +33,7 @@ class quiet_test extends uvm_test;
       end
 
       `uvm_info("MEMORY TEST", $psprintf("Running %0d loops",nloops),UVM_MEDIUM);
-      
+
       repeat (nloops) begin
          @(negedge mif.clk);
          mif.wr = $random;
