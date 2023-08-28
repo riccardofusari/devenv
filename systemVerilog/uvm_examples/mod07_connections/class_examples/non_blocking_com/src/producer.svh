@@ -1,8 +1,9 @@
-class producer extends uvm_agent; 
-  
-  uvm_put_port  #(int) phone1; 
-  
+class producer extends uvm_agent;
+
+  uvm_put_port  #(int) phone1;
+
   `uvm_component_utils(producer)
+
  
   function new(string name, 
                uvm_component parent);
@@ -11,7 +12,7 @@ class producer extends uvm_agent;
 
   function void build_phase(uvm_phase phase);
     super.build();
-     phone1=new("phone1",this); 
+    phone1=new("phone1",this);
   endfunction: build_phase
 
   task run_phase(uvm_phase phase);
@@ -24,6 +25,6 @@ class producer extends uvm_agent;
      end : loop
      phase.drop_objection(this);
   endtask : run_phase
-   
+
 endclass: producer
 

@@ -35,7 +35,7 @@
 module rca_wrap 
 #(
     parameter DWIDTH = 32
-) 
+)
 (
     rca_if.rca_port port        /* Receives the interface port mapping as input parameter*/
 );

@@ -11,14 +11,14 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                 3          3          -                      
         missing/total bins:                                 0          3          -                      
         % Hit:                                        100.00%        100          -                      
-        bin corners[0]                                      8          1          -    Covered              
-        bin corners[127]                                    5          1          -    Covered              
-        bin corners[255]                                    8          1          -    Covered              
-        default bin others                                179                     -    Occurred             
+        bin corners[0]                                      6          1          -    Covered              
+        bin corners[127]                                    6          1          -    Covered              
+        bin corners[255]                                    5          1          -    Covered              
+        default bin others                                183                     -    Occurred             
     Coverpoint rst                                    100.00%        100          -    Covered              
         covered/total bins:                                 1          1          -                      
         missing/total bins:                                 0          1          -                      
         % Hit:                                        100.00%        100          -                      
-        bin zero                                           16          1          -    Covered              
+        bin zero                                           30          1          -    Covered              
 
 TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
