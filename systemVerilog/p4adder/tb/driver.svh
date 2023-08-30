@@ -27,9 +27,7 @@ class driver extends uvm_driver #(transaction);
                                                                                   tx.stimuli.b,
                                                                                   tx.stimuli.cin),
                                                                                   UVM_LOW);
-
             drive_tx(tx);
-
             @(posedge p4_vi.clk)
                 seq_item_port.item_done();
         end

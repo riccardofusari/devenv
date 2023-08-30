@@ -1,5 +1,5 @@
-class subscriber extends uvm_subscriber #(transaction);
-  `uvm_component_utils(subscriber)
+class coverage extends uvm_subscriber #(transaction);
+  `uvm_component_utils(coverage)
 
   logic cin;
   logic [NBITS - 1 : 0] a;
@@ -18,6 +18,8 @@ class subscriber extends uvm_subscriber #(transaction);
     {
         /* Corner values: first, last and last signed */
         bins corners[] = {0, (1<<NBITS)-1, (1<<(NBITS-1))-1};
+        bins zero      = {0};
+        bins one       = {32'hFFFFFFFF};
         bins others    = default;
     }
 
@@ -25,14 +27,18 @@ class subscriber extends uvm_subscriber #(transaction);
     {
         /* Corner values: first, last and last signed */
         bins corners[] = {0, (1<<NBITS)-1, (1<<(NBITS-1))-1};
+        bins zero      = {0};
+        bins one       = {32'hFFFFFFFF};
         bins others    = default;
     }
+
+    cr:  cross carry_in, a_cp, b_cp;
   endgroup: cg
 
 
   function new(string name, uvm_component parent);
     super.new(name, parent);
-    cg = new;
+    cg = new();
   endfunction
 
 

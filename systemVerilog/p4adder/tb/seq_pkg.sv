@@ -26,6 +26,7 @@ package seq_pkg;
             stimuli.a dist
             {
                 0                  := 10,
+                (32'hFFFFFFFF)     := 10,
                 (1<<NBITS)-1       := 10,    /* Maximum data        */
                 (1<<(NBITS-1))-1   := 10,    /* Maximum signed data */
                 [1:(1<<NBITS)-2]   := 1      /* Range               */
@@ -34,6 +35,7 @@ package seq_pkg;
             stimuli.b dist 
             {
                 0                  := 10,
+                (32'hFFFFFFFF)     := 10,
                 (1<<NBITS)-1       := 10,    /* Maximum data        */
                 (1<<(NBITS-1))-1   := 10,    /* Maximum signed data */
                 [1:(1<<NBITS)-2]   := 1      /* Range               */

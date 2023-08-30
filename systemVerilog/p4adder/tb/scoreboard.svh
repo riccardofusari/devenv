@@ -16,53 +16,49 @@ class scoreboard extends uvm_scoreboard;
     endfunction
 
     function void write(transaction req);
-        item_q.push_back(req);
+        //item_q.push_back(req);
     endfunction
 
     task run_phase (uvm_phase phase);
-    transaction sb_item;
-    forever begin
-        @(posedge p4_vi.clk);
-        @(posedge p4_vi.clk);
-        /*
-        wait(item_q.size > 0);
+        transaction sb_item;
+        forever begin
+            /*
+            wait(item_q.size > 0);
 
-        if(item_q.size > 0) begin
-            sb_item = item_q.pop_front();
+            if(item_q.size > 0) begin
+                sb_item = item_q.pop_front();
+                $display("----------------------------------------------------------------------------------------------------------");
+                if(sb_item.stimuli.a + sb_item.stimuli.b == sb_item.sum_tb) begin
+                    `uvm_info(get_type_name, $sformatf("Matched: a = %0d, b = %0d, sum = %0d", sb_item.stimuli.a, sb_item.stimuli.b, sb_item.sum_tb),UVM_LOW);
+                end
+                else begin
+                    `uvm_error(get_name, $sformatf("NOT matched: a = %0d, b = %0d, sum = %0d", sb_item.stimuli.a, sb_item.stimuli.b, sb_item.sum_tb));
+                end
+                $display("----------------------------------------------------------------------------------------------------------");
+            end*/
+
+            @(posedge p4_vi.clk);
+            @(posedge p4_vi.clk);
+
             $display("----------------------------------------------------------------------------------------------------------");
-            if(sb_item.stimuli.a + sb_item.stimuli.b == sb_item.sum_tb) begin
-                `uvm_info(get_type_name, $sformatf("Matched: a = %0d, b = %0d, sum = %0d", sb_item.stimuli.a, sb_item.stimuli.b, sb_item.sum_tb),UVM_LOW);
-            end
-            else begin
-                `uvm_error(get_name, $sformatf("NOT matched: a = %0d, b = %0d, sum = %0d", sb_item.stimuli.a, sb_item.stimuli.b, sb_item.sum_tb));
-            end
-            $display("----------------------------------------------------------------------------------------------------------");
-        end*/
-
-$display("----------------------------------------------------------------------------------------------------------");
-
-         if (p4_vi.cin == 0) begin
-                /*assert(p4_vi.sum_tb == p4_vi.a + p4_vi.b) else 
-                  `uvm_error("run", 
-                  $psprintf("expected %h  actual: %h", p4_vi.a + p4_vi.b, p4_vi.sum_tb));*/
+            if (p4_vi.cin == 0) begin
                 if (p4_vi.sum_tb == p4_vi.a + p4_vi.b) begin
                     `uvm_info(get_type_name, $sformatf("Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb),UVM_LOW);
                 end
                 else begin
                     `uvm_error(get_type_name, $sformatf("NOT Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb));
                 end
-         end
-        else if (p4_vi.cin == 1) begin
-            if (p4_vi.sum_tb == p4_vi.a - p4_vi.b) begin
-                `uvm_info(get_type_name, $sformatf("Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb),UVM_LOW);
             end
-            else begin
-                `uvm_error(get_type_name, $sformatf("NOT Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb));
+            else if (p4_vi.cin == 1) begin
+                if (p4_vi.sum_tb == p4_vi.a - p4_vi.b) begin
+                    `uvm_info(get_type_name, $sformatf("Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb),UVM_LOW);
+                end
+                else begin
+                    `uvm_error(get_type_name, $sformatf("NOT Matched: a = %0d, b = %0d, sum = %0d", p4_vi.a, p4_vi.b, p4_vi.sum_tb));
+                end
             end
-            end     
-$display("----------------------------------------------------------------------------------------------------------");
-
-    end
+            $display("----------------------------------------------------------------------------------------------------------");
+        end
     endtask
   
 endclass
