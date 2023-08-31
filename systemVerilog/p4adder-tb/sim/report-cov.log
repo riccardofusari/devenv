@@ -1,0 +1,78 @@
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /p4_pkg/coverage/cg                             100.00%        100          -    Covered              
+    covered/total bins:                                    42         42          -                      
+    missing/total bins:                                     0         42          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint carry_in                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                         2074          1          -    Covered              
+        bin one                                          1925          1          -    Covered              
+    Coverpoint a_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin corners[0]                                    675          1          -    Covered              
+        bin corners[2147483647]                           652          1          -    Covered              
+        bin zero                                          675          1          -    Covered              
+        bin one                                           672          1          -    Covered              
+        default bin others                               2001                     -    Occurred             
+    Coverpoint b_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin corners[0]                                    665          1          -    Covered              
+        bin corners[2147483647]                           667          1          -    Covered              
+        bin zero                                          665          1          -    Covered              
+        bin one                                           667          1          -    Covered              
+        default bin others                               2001                     -    Occurred             
+    Cross cr                                          100.00%        100          -    Covered              
+        covered/total bins:                                32         32          -                      
+        missing/total bins:                                 0         32          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <one,one,one>                             107          1          -    Covered              
+            bin <zero,one,one>                            105          1          -    Covered              
+            bin <one,zero,one>                            106          1          -    Covered              
+            bin <zero,zero,one>                           137          1          -    Covered              
+            bin <one,corners[2147483647],one>             102          1          -    Covered              
+            bin <one,corners[0],one>                      106          1          -    Covered              
+            bin <zero,corners[2147483647],one>            110          1          -    Covered              
+            bin <zero,corners[0],one>                     137          1          -    Covered              
+            bin <one,one,zero>                            127          1          -    Covered              
+            bin <zero,one,zero>                           119          1          -    Covered              
+            bin <one,zero,zero>                            98          1          -    Covered              
+            bin <zero,zero,zero>                          113          1          -    Covered              
+            bin <one,corners[2147483647],zero>             99          1          -    Covered              
+            bin <one,corners[0],zero>                      98          1          -    Covered              
+            bin <zero,corners[2147483647],zero>           109          1          -    Covered              
+            bin <zero,corners[0],zero>                    113          1          -    Covered              
+            bin <one,one,corners[2147483647]>              95          1          -    Covered              
+            bin <one,one,corners[0]>                      127          1          -    Covered              
+            bin <zero,one,corners[2147483647]>            119          1          -    Covered              
+            bin <zero,one,corners[0]>                     119          1          -    Covered              
+            bin <one,zero,corners[2147483647]>            113          1          -    Covered              
+            bin <one,zero,corners[0]>                      98          1          -    Covered              
+            bin <zero,zero,corners[2147483647]>           108          1          -    Covered              
+            bin <zero,zero,corners[0]>                    113          1          -    Covered              
+            bin <one,corners[2147483647],corners[2147483647]> 
+                                                          110          1          -    Covered              
+            bin <one,corners[0],corners[2147483647]> 
+                                                          113          1          -    Covered              
+            bin <one,corners[2147483647],corners[0]> 
+                                                           99          1          -    Covered              
+            bin <one,corners[0],corners[0]>                98          1          -    Covered              
+            bin <zero,corners[2147483647],corners[2147483647]> 
+                                                          122          1          -    Covered              
+            bin <zero,corners[0],corners[2147483647]> 
+                                                          108          1          -    Covered              
+            bin <zero,corners[2147483647],corners[0]> 
+                                                          109          1          -    Covered              
+            bin <zero,corners[0],corners[0]>              113          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1

@@ -1,0 +1,156 @@
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fsm_pkg/coverage/cg                            100.00%        100          -    Covered              
+    covered/total bins:                                   117        117          -                      
+    missing/total bins:                                     0        117          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint funcc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add                                           390          1          -    Covered              
+        bin sub                                           437          1          -    Covered              
+        bin andd                                          394          1          -    Covered              
+        bin orr                                           396          1          -    Covered              
+        bin nop                                          1383          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint opcodee                                100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rtype                                        1119          1          -    Covered              
+        bin addi1                                         162          1          -    Covered              
+        bin subi1                                         141          1          -    Covered              
+        bin and1                                          143          1          -    Covered              
+        bin ori1                                          122          1          -    Covered              
+        bin addi2                                         141          1          -    Covered              
+        bin subi2                                         129          1          -    Covered              
+        bin andi2                                         133          1          -    Covered              
+        bin ori2                                          135          1          -    Covered              
+        bin mov                                           131          1          -    Covered              
+        bin s_reg1                                        132          1          -    Covered              
+        bin s_reg2                                        115          1          -    Covered              
+        bin s_mem                                         129          1          -    Covered              
+        bin l_mem1                                        140          1          -    Covered              
+        bin l_mem2                                        128          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint b_cp                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                         1000          1          -    Covered              
+        bin one                                          2000          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint opcode                                 100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[RTYPE]                                  1119          1          -    Covered              
+        bin auto[ADDI1]                                   162          1          -    Covered              
+        bin auto[SUBI1]                                   141          1          -    Covered              
+        bin auto[AND1]                                    143          1          -    Covered              
+        bin auto[ORI1]                                    122          1          -    Covered              
+        bin auto[ADDI2]                                   141          1          -    Covered              
+        bin auto[SUBI2]                                   129          1          -    Covered              
+        bin auto[ANDI2]                                   133          1          -    Covered              
+        bin auto[ORI2]                                    135          1          -    Covered              
+        bin auto[MOV]                                     131          1          -    Covered              
+        bin auto[S_REG1]                                  132          1          -    Covered              
+        bin auto[S_REG2]                                  115          1          -    Covered              
+        bin auto[S_MEM]                                   129          1          -    Covered              
+        bin auto[L_MEM1]                                  140          1          -    Covered              
+        bin auto[L_MEM2]                                  128          1          -    Covered              
+    Coverpoint func                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[ADD]                                     390          1          -    Covered              
+        bin auto[SUB]                                     437          1          -    Covered              
+        bin auto[AND]                                     394          1          -    Covered              
+        bin auto[OR]                                      396          1          -    Covered              
+        bin auto[NOP]                                    1383          1          -    Covered              
+    Cross cr                                          100.00%        100          -    Covered              
+        covered/total bins:                                75         75          -                      
+        missing/total bins:                                 0         75          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[L_MEM2],auto[NOP]>                   78          1          -    Covered              
+            bin <auto[L_MEM1],auto[NOP]>                   74          1          -    Covered              
+            bin <auto[S_MEM],auto[NOP]>                    66          1          -    Covered              
+            bin <auto[S_REG2],auto[NOP]>                   64          1          -    Covered              
+            bin <auto[S_REG1],auto[NOP]>                   78          1          -    Covered              
+            bin <auto[MOV],auto[NOP]>                      81          1          -    Covered              
+            bin <auto[ORI2],auto[NOP]>                     77          1          -    Covered              
+            bin <auto[ANDI2],auto[NOP]>                    74          1          -    Covered              
+            bin <auto[SUBI2],auto[NOP]>                    80          1          -    Covered              
+            bin <auto[ADDI2],auto[NOP]>                    78          1          -    Covered              
+            bin <auto[ORI1],auto[NOP]>                     71          1          -    Covered              
+            bin <auto[AND1],auto[NOP]>                     89          1          -    Covered              
+            bin <auto[SUBI1],auto[NOP]>                    88          1          -    Covered              
+            bin <auto[ADDI1],auto[NOP]>                   103          1          -    Covered              
+            bin <auto[RTYPE],auto[NOP]>                   282          1          -    Covered              
+            bin <auto[L_MEM2],auto[OR]>                    10          1          -    Covered              
+            bin <auto[L_MEM1],auto[OR]>                    17          1          -    Covered              
+            bin <auto[S_MEM],auto[OR]>                     17          1          -    Covered              
+            bin <auto[S_REG2],auto[OR]>                    10          1          -    Covered              
+            bin <auto[S_REG1],auto[OR]>                    10          1          -    Covered              
+            bin <auto[MOV],auto[OR]>                        9          1          -    Covered              
+            bin <auto[ORI2],auto[OR]>                      13          1          -    Covered              
+            bin <auto[ANDI2],auto[OR]>                     14          1          -    Covered              
+            bin <auto[SUBI2],auto[OR]>                     16          1          -    Covered              
+            bin <auto[ADDI2],auto[OR]>                     14          1          -    Covered              
+            bin <auto[ORI1],auto[OR]>                      13          1          -    Covered              
+            bin <auto[AND1],auto[OR]>                      21          1          -    Covered              
+            bin <auto[SUBI1],auto[OR]>                     17          1          -    Covered              
+            bin <auto[ADDI1],auto[OR]>                     12          1          -    Covered              
+            bin <auto[RTYPE],auto[OR]>                    203          1          -    Covered              
+            bin <auto[L_MEM2],auto[AND]>                   15          1          -    Covered              
+            bin <auto[L_MEM1],auto[AND]>                   17          1          -    Covered              
+            bin <auto[S_MEM],auto[AND]>                    10          1          -    Covered              
+            bin <auto[S_REG2],auto[AND]>                   13          1          -    Covered              
+            bin <auto[S_REG1],auto[AND]>                   11          1          -    Covered              
+            bin <auto[MOV],auto[AND]>                      14          1          -    Covered              
+            bin <auto[ORI2],auto[AND]>                     13          1          -    Covered              
+            bin <auto[ANDI2],auto[AND]>                    11          1          -    Covered              
+            bin <auto[SUBI2],auto[AND]>                    13          1          -    Covered              
+            bin <auto[ADDI2],auto[AND]>                    17          1          -    Covered              
+            bin <auto[ORI1],auto[AND]>                     14          1          -    Covered              
+            bin <auto[AND1],auto[AND]>                     12          1          -    Covered              
+            bin <auto[SUBI1],auto[AND]>                     6          1          -    Covered              
+            bin <auto[ADDI1],auto[AND]>                    12          1          -    Covered              
+            bin <auto[RTYPE],auto[AND]>                   216          1          -    Covered              
+            bin <auto[L_MEM2],auto[SUB]>                   18          1          -    Covered              
+            bin <auto[L_MEM1],auto[SUB]>                   15          1          -    Covered              
+            bin <auto[S_MEM],auto[SUB]>                    11          1          -    Covered              
+            bin <auto[S_REG2],auto[SUB]>                   18          1          -    Covered              
+            bin <auto[S_REG1],auto[SUB]>                   21          1          -    Covered              
+            bin <auto[MOV],auto[SUB]>                      13          1          -    Covered              
+            bin <auto[ORI2],auto[SUB]>                     18          1          -    Covered              
+            bin <auto[ANDI2],auto[SUB]>                    20          1          -    Covered              
+            bin <auto[SUBI2],auto[SUB]>                     9          1          -    Covered              
+            bin <auto[ADDI2],auto[SUB]>                    13          1          -    Covered              
+            bin <auto[ORI1],auto[SUB]>                     14          1          -    Covered              
+            bin <auto[AND1],auto[SUB]>                     11          1          -    Covered              
+            bin <auto[SUBI1],auto[SUB]>                    14          1          -    Covered              
+            bin <auto[ADDI1],auto[SUB]>                    17          1          -    Covered              
+            bin <auto[RTYPE],auto[SUB]>                   225          1          -    Covered              
+            bin <auto[L_MEM2],auto[ADD]>                    7          1          -    Covered              
+            bin <auto[L_MEM1],auto[ADD]>                   17          1          -    Covered              
+            bin <auto[S_MEM],auto[ADD]>                    25          1          -    Covered              
+            bin <auto[S_REG2],auto[ADD]>                   10          1          -    Covered              
+            bin <auto[S_REG1],auto[ADD]>                   12          1          -    Covered              
+            bin <auto[MOV],auto[ADD]>                      14          1          -    Covered              
+            bin <auto[ORI2],auto[ADD]>                     14          1          -    Covered              
+            bin <auto[ANDI2],auto[ADD]>                    14          1          -    Covered              
+            bin <auto[SUBI2],auto[ADD]>                    11          1          -    Covered              
+            bin <auto[ADDI2],auto[ADD]>                    19          1          -    Covered              
+            bin <auto[ORI1],auto[ADD]>                     10          1          -    Covered              
+            bin <auto[AND1],auto[ADD]>                     10          1          -    Covered              
+            bin <auto[SUBI1],auto[ADD]>                    16          1          -    Covered              
+            bin <auto[ADDI1],auto[ADD]>                    18          1          -    Covered              
+            bin <auto[RTYPE],auto[ADD]>                   193          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
