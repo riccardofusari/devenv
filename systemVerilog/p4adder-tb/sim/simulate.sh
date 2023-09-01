@@ -6,8 +6,9 @@ fi
 
 vlib work
 
-vcom -F compilevhdl.f
+vcom +cover -F compilevhdl.f
 vlog -coveropt 3 +cover +acc -F compilesv.f
 
 
 vsim -c -sv_seed random -do "sim.do" -do cov.do -voptargs="+acc" tb_top -coverage +UVM_TESTNAME=test | tee report-sim.log
+vcover report -details -output report-cov.log results/coverage_report.ucdb

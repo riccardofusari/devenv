@@ -21,22 +21,26 @@ class coverage extends uvm_subscriber #(transaction);
         }
         opcodee: coverpoint opcode
         {
-            bins rtype   = {0};
-            bins addi1   = {1};
-            bins subi1   = {2};
-            bins and1    = {3};
-            bins ori1    = {4};
-            bins addi2   = {5};
-            bins subi2   = {6};
-            bins andi2   = {7};
-            bins ori2    = {8};
-            bins mov     = {9};
-            bins s_reg1  = {10};
-            bins s_reg2  = {11};
-            bins s_mem   = {12};
-            bins l_mem1  = {13};
-            bins l_mem2  = {14};
+            bins rtype   = {RTYPE};
+            bins addi1   = {ADDI1};
+            bins subi1   = {SUBI1};
+            bins and1    = {AND1};
+            bins ori1    = {ORI1};
+            bins addi2   = {ADDI2};
+            bins subi2   = {SUBI2};
+            bins andi2   = {ANDI2};
+            bins ori2    = {ORI2};
+            bins mov     = {MOV};
+            bins s_reg1  = {S_REG1};
+            bins s_reg2  = {S_REG2};
+            bins s_mem   = {S_MEM};
+            bins l_mem1  = {L_MEM1};
+            bins l_mem2  = {L_MEM2};
             bins others    = default;
+
+            bins mov_add = (MOV => ADDI1);
+            bins mov_mem = (MOV => S_MEM);
+            bins rty_mem = (RTYPE => L_MEM1);
         }
         rst: coverpoint rst
         {
@@ -44,7 +48,7 @@ class coverage extends uvm_subscriber #(transaction);
             bins one       = {1};
             bins others    = default;
         }
-        cr:  cross opcode, func;
+        cr:  cross opcode, func, rst;
     endgroup: cg
 
 
@@ -62,8 +66,9 @@ class coverage extends uvm_subscriber #(transaction);
     function void write(transaction t);  
         func     = t.funcEnum();
         opcode   = t.opEnum();
-        `uvm_info(get_type_name(), $sformatf("Coverage received OPCODE = %0d, FUNC = %0d", opcode.name(), func.name()), UVM_LOW);
         rst = t.rst;
+        `uvm_info(get_type_name(), $sformatf("Coverage received OPCODE = %0d, FUNC = %0d", opcode.name(), func.name()), UVM_LOW);
+
         count++;
         cg.sample();
         `uvm_info(get_type_name(), $sformatf("Current Coverage = %0f", cg.get_coverage()), UVM_LOW)

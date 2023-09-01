@@ -42,21 +42,21 @@ class scoreboard extends uvm_scoreboard;
         logic [1:0] alu_actual;
 
         case (sb_tx.opEnum())
-            RTYPE:  cw_expected = 11'b11101100101;     //RTYPE;
-            ADDI1:  cw_expected = 11'b01111100101;     //ADDI1;
-            SUBI1:  cw_expected = 11'b01111100101;     //SUBI1;
-            AND1:  cw_expected = 11'b01111100101;     //AND1;
-            ORI1:  cw_expected = 11'b01111100101;     //ORI1;
-            ADDI2:  cw_expected = 11'b10100100101;     //ADDI2;
-            SUBI2:  cw_expected = 11'b10100100101;     //SUBI2;
-            ANDI2:  cw_expected = 11'b10100100101;     //ANDI2;
-            ORI2:  cw_expected = 11'b10100100101;     //ORI2;
-            MOV:  cw_expected = 11'b10101000111;     //MOV;
-            S_REG1:  cw_expected = 11'b00011000111;     //S_REG1;
-            S_REG2:  cw_expected = 11'b00000000111;     //S_REG2;
-            S_MEM:  cw_expected = 11'b11111101101;     //S_MEM;
-            L_MEM1:  cw_expected = 11'b01111110101;     //L_MEM1;
-            L_MEM2:  cw_expected = 11'b10100110101;     //L_MEM2;
+            RTYPE  :   cw_expected = 11'b11101100101;     //RTYPE;
+            ADDI1  :   cw_expected = 11'b01111100101;     //ADDI1;
+            SUBI1  :   cw_expected = 11'b01111100101;     //SUBI1;
+            AND1   :   cw_expected = 11'b01111100101;     //AND1;
+            ORI1   :   cw_expected = 11'b01111100101;     //ORI1;
+            ADDI2  :   cw_expected = 11'b10100100101;     //ADDI2;
+            SUBI2  :   cw_expected = 11'b10100100101;     //SUBI2;
+            ANDI2  :   cw_expected = 11'b10100100101;     //ANDI2;
+            ORI2   :   cw_expected = 11'b10100100101;     //ORI2;
+            MOV    :   cw_expected = 11'b10101000111;     //MOV;
+            S_REG1 :   cw_expected = 11'b00011000111;     //S_REG1;
+            S_REG2 :   cw_expected = 11'b00000000111;     //S_REG2;
+            S_MEM  :   cw_expected = 11'b11111101101;     //S_MEM;
+            L_MEM1 :   cw_expected = 11'b01111110101;     //L_MEM1;
+            L_MEM2 :   cw_expected = 11'b10100110101;     //L_MEM2;
             default:    `uvm_info("SCOREBOARD", "DEFAULT", UVM_LOW) // Default value or error handling
         endcase
 
@@ -70,15 +70,15 @@ class scoreboard extends uvm_scoreboard;
                             default:         alu_expected = 2'b11;
                         endcase
                     end
-            ADDI1: alu_expected = 2'b00;
-            SUBI1: alu_expected = 2'b01;
-            AND1: alu_expected  = 2'b10;
-            ORI1: alu_expected  = 2'b11;
-            ADDI2: alu_expected = 2'b00;
-            SUBI2: alu_expected = 2'b01;
-            ANDI2: alu_expected = 2'b10;
-            ORI2: alu_expected  = 2'b11;
-            default:   alu_expected = 2'b00;
+            ADDI1:   alu_expected = 2'b00;
+            SUBI1:   alu_expected = 2'b01;
+            AND1:    alu_expected = 2'b10;
+            ORI1:    alu_expected = 2'b11;
+            ADDI2:   alu_expected = 2'b00;
+            SUBI2:   alu_expected = 2'b01;
+            ANDI2:   alu_expected = 2'b10;
+            ORI2:    alu_expected = 2'b11;
+            default: alu_expected = 2'b00;
         endcase
 
 

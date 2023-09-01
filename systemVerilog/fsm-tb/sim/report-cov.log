@@ -1,43 +1,956 @@
-COVERGROUP COVERAGE:
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /top/fsm_if_h
+=== Design Unit: work.fsm_if
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       5         5         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/fsm_if_h --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/fsm_if.sv
+    48              1                          1     
+    49              1                          1     
+    50              1                          1     
+    53              1                      18001     
+    54              1                      18000     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         64        44        20    68.75%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/fsm_if_h --
+
+                                              Node      1H->0L      0L->1H                          "Coverage"
+                                              ---------------------------------------------------------------
+                                        func[10-3]           0           0                                0.00 
+                                       opcode[5-4]           0           0                                0.00 
+
+Total Node Count     =         32 
+Toggled Node Count   =         22 
+Untoggled Node Count =         10 
+
+Toggle Coverage      =      68.75% (44 of 64 bins)
+
+=================================================================================
+=== Instance: /top/fsm_wrap_h/fsm_u
+=== Design Unit: work.fsm(dlx_cu_rtl)
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        24        24         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/fsm_wrap_h/fsm_u
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../src/fsm.vhd
+------------------------------------CASE Branch------------------------------------
+    109                                     2954     Count coming in to CASE
+    111             1                       1111     
+    119             1                        143     
+    120             1                        123     
+    121             1                        118     
+    122             1                        135     
+    123             1                        150     
+    124             1                        143     
+    125             1                        145     
+    126             1                        126     
+    127             1                        760     
+Branch totals: 10 hits of 10 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    112                                     1111     Count coming in to CASE
+    113             1                        193     
+    114             1                        214     
+    115             1                        224     
+    116             1                        480     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    137                                     7000     Count coming in to IF
+    137             1                       1000     
+    139             1                       6000     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    146                                     7001     Count coming in to CASE
+    147             1                       1001     
+    149             1                       2000     
+    151             1                       2000     
+    153             1                       2000     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    160                                     7001     Count coming in to CASE
+    161             1                       1001     
+    167             1                       2000     
+    173             1                       2000     
+    179             1                       2000     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       4         4         0   100.00%
+    FSM Transitions                  7         5         2    71.42%
+
+================================FSM Details================================
+
+FSM Coverage for instance /top/fsm_wrap_h/fsm_u --
+
+FSM_ID: CURRENT_STATE
+    Current State Object : CURRENT_STATE
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+ 147               reset                   0
+ 149              stage1                   1
+ 151              stage2                   2
+ 153              stage3                   3
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                   reset                1000          
+                  stage1                2000          
+                  stage2                2000          
+                  stage3                2000          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+ 148                   0                1000          reset -> stage1               
+ 150                   1                2000          stage1 -> stage2              
+ 152                   3                2000          stage2 -> stage3              
+ 154                   5                1000          stage3 -> stage1              
+ 138                   6                1000          stage3 -> reset               
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+ 138                   2          stage1 -> reset     
+ 138                   4          stage2 -> reset     
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   4         4         0   100.00%
+        FSM Transitions              7         5         2    71.42%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      54        54         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/fsm_wrap_h/fsm_u --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../src/fsm.vhd
+    84              1                       2791     
+    89              1                       3074     
+    90              1                       2912     
+    91              1                       3752     
+    94              1                        894     
+    95              1                       3144     
+    96              1                       3630     
+    99              1                        268     
+    100             1                        106     
+    101             1                       4002     
+    102             1                        374     
+    103             1                       4002     
+    107             1                       2954     
+    113             1                        193     
+    114             1                        214     
+    115             1                        224     
+    116             1                        480     
+    119             1                        143     
+    120             1                        123     
+    121             1                        118     
+    122             1                        135     
+    123             1                        150     
+    124             1                        143     
+    125             1                        145     
+    126             1                        126     
+    127             1                        760     
+    138             1                       1000     
+    140             1                       6000     
+    144             1                       7001     
+    148             1                       1001     
+    150             1                       2000     
+    152             1                       2000     
+    154             1                       2000     
+    158             1                       7001     
+    162             1                       1001     
+    163             1                       1001     
+    164             1                       1001     
+    165             1                       1001     
+    166             1                       1001     
+    168             1                       2000     
+    169             1                       2000     
+    170             1                       2000     
+    171             1                       2000     
+    172             1                       2000     
+    174             1                       2000     
+    175             1                       2000     
+    176             1                       2000     
+    177             1                       2000     
+    178             1                       2000     
+    180             1                       2000     
+    181             1                       2000     
+    182             1                       2000     
+    183             1                       2000     
+    184             1                       2000     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        164       139        25    84.75%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/fsm_wrap_h/fsm_u --
+
+                                              Node      1H->0L      0L->1H                          "Coverage"
+                                              ---------------------------------------------------------------
+                                     CURRENT_STATE               ENUM type       Value       Count 
+                                             cw(0)           0           0                                0.00 
+                                             cw(2)           0           0                                0.00 
+                                        FUNC(3-10)           0           0                                0.00 
+                                        NEXT_STATE               ENUM type       Value       Count 
+                                                                     reset           0        0.00 
+                                       OPCODE(4-5)           0           0                                0.00 
+
+Total Node Count     =         86 
+Toggled Node Count   =         73 
+Untoggled Node Count =         13 
+
+Toggle Coverage      =      84.75% (139 of 164 bins)
+
+=================================================================================
+=== Instance: /top
+=== Design Unit: work.top
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       2         2         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/top.sv
+    14              1                          1     
+    18              1                          1     
+
+=================================================================================
+=== Instance: /fsm_pkg
+=== Design Unit: work.fsm_pkg
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fsm_pkg/rtype_sequence/body/immed__178
+                     ../tb/fsm_sequences.svh(178)
+                                                        0          1
+/fsm_pkg/itype_sequence/body/immed__199
+                     ../tb/fsm_sequences.svh(199)
+                                                        0          1
+/fsm_pkg/rst_sequence/body/immed__219
+                     ../tb/fsm_sequences.svh(219)
+                                                        0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       168        87        81    51.78%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fsm_pkg
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/fsm_sequences.svh
+------------------------------------IF Branch------------------------------------
+    2                                    ***0***     Count coming in to IF
+    2               1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    2                                    ***0***     Count coming in to IF
+    2               2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    2                                    ***0***     Count coming in to IF
+    2               3                    ***0***     
+    2               4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    2                                    ***0***     Count coming in to IF
+    2               5                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    2                                    ***0***     Count coming in to IF
+    2               6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    41                                   ***0***     Count coming in to IF
+    41              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    42                                   ***0***     Count coming in to IF
+    42              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    44                                   ***0***     Count coming in to IF
+    44              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    45                                   ***0***     Count coming in to IF
+    45              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    70                                   ***0***     Count coming in to IF
+    70              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    71                                   ***0***     Count coming in to IF
+    71              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                   ***0***     Count coming in to IF
+    73              1                    ***0***     
+    75              1                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------CASE Branch------------------------------------
+    104                                     6000     Count coming in to CASE
+    105             1                       2278     
+    106             1                        286     
+    107             1                        254     
+    108             1                        242     
+    109             1                        270     
+    110             1                        302     
+    111             1                        290     
+    112             1                        292     
+    113             1                        256     
+    114             1                        240     
+    115             1                        232     
+    116             1                        278     
+    117             1                        240     
+    118             1                        294     
+    119             1                        246     
+                                         ***0***     All False Count
+Branch totals: 15 hits of 16 branches = 93.75%
+
+------------------------------------CASE Branch------------------------------------
+    124                                    12000     Count coming in to CASE
+    125             1                       4556     
+    126             1                        572     
+    127             1                        508     
+    128             1                        484     
+    129             1                        540     
+    130             1                        604     
+    131             1                        580     
+    132             1                        584     
+    133             1                        512     
+    134             1                        480     
+    135             1                        464     
+    136             1                        556     
+    137             1                        480     
+    138             1                        588     
+    139             1                        492     
+                                         ***0***     All False Count
+Branch totals: 15 hits of 16 branches = 93.75%
+
+------------------------------------CASE Branch------------------------------------
+    144                                     6000     Count coming in to CASE
+    145             1                        738     
+    146             1                        796     
+    147             1                        850     
+    148             1                        764     
+    149             1                       2852     
+                                         ***0***     All False Count
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------CASE Branch------------------------------------
+    154                                     6000     Count coming in to CASE
+    155             1                        738     
+    156             1                        796     
+    157             1                        850     
+    158             1                        764     
+    159             1                       2852     
+                                         ***0***     All False Count
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------IF Branch------------------------------------
+    166                                  ***0***     Count coming in to IF
+    166             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    166                                  ***0***     Count coming in to IF
+    166             2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    166                                  ***0***     Count coming in to IF
+    166             3                    ***0***     
+    166             4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    166                                  ***0***     Count coming in to IF
+    166             5                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    166                                  ***0***     Count coming in to IF
+    166             6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    175                                     1000     Count coming in to IF
+    175             1                       1000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             3                    ***0***     
+    187             4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             5                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    187                                  ***0***     Count coming in to IF
+    187             6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    196                                     1000     Count coming in to IF
+    196             1                       1000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    207                                  ***0***     Count coming in to IF
+    207             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    207                                  ***0***     Count coming in to IF
+    207             2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    207                                  ***0***     Count coming in to IF
+    207             3                    ***0***     
+    207             4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    207                                  ***0***     Count coming in to IF
+    207             5                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    207                                  ***0***     Count coming in to IF
+    207             6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    216                                     1000     Count coming in to IF
+    216             1                       1000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File ../tb/fsm_driver.svh
+------------------------------------IF Branch------------------------------------
+    18                                         1     Count coming in to IF
+    18              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    26                                      3000     Count coming in to IF
+    26              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File ../tb/fsm_monitor.svh
+------------------------------------IF Branch------------------------------------
+    31                                      3000     Count coming in to IF
+    31              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File ../tb/fsm_scoreboard.svh
+------------------------------------IF Branch------------------------------------
+    30                                      3000     Count coming in to IF
+    30              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------CASE Branch------------------------------------
+    44                                      3000     Count coming in to CASE
+    45              1                       1139     
+    46              1                        143     
+    47              1                        127     
+    48              1                        121     
+    49              1                        135     
+    50              1                        151     
+    51              1                        145     
+    52              1                        146     
+    53              1                        128     
+    54              1                        120     
+    55              1                        116     
+    56              1                        139     
+    57              1                        120     
+    58              1                        147     
+    59              1                        123     
+    60              1                    ***0***     
+Branch totals: 15 hits of 16 branches = 93.75%
+
+------------------------------------IF Branch------------------------------------
+    60                                   ***0***     Count coming in to IF
+    60              2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------CASE Branch------------------------------------
+    63                                      3000     Count coming in to CASE
+    64              1                       1139     
+    73              1                        143     
+    74              1                        127     
+    75              1                        121     
+    76              1                        135     
+    77              1                        151     
+    78              1                        145     
+    79              1                        146     
+    80              1                        128     
+    81              1                        765     
+Branch totals: 10 hits of 10 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    66                                      1139     Count coming in to CASE
+    67              1                        195     
+    68              1                        219     
+    69              1                        227     
+    70              1                        498     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    88                                      3000     Count coming in to IF
+    88              1                       1000     
+                                            2000     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    94                                      3000     Count coming in to IF
+    94              1                       3000     
+    99              1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    95                                      3000     Count coming in to IF
+    95              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    100                                  ***0***     Count coming in to IF
+    100             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    103                                     3000     Count coming in to IF
+    103             1                       3000     
+    108             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    104                                     3000     Count coming in to IF
+    104             1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    109                                  ***0***     Count coming in to IF
+    109             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+
+  File ../tb/fsm_coverage.svh
+------------------------------------IF Branch------------------------------------
+    70                                      3000     Count coming in to IF
+    70              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    74                                      3000     Count coming in to IF
+    74              1                       3000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    80                                         1     Count coming in to IF
+    80              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    81                                         1     Count coming in to IF
+    81              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File ../tb/fsm_test.svh
+------------------------------------IF Branch------------------------------------
+    49                                         1     Count coming in to IF
+    49              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      13         0        13     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fsm_pkg --
+
+  File ../tb/fsm_sequences.svh
+----------------Focused Condition View-------------------
+Line       2 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       2 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       41 Item    1  (rhs == null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (rhs == null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (rhs == null)_0       -                             
+  Row   2:    ***0***  (rhs == null)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       70 Item    1  (rhs == null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (rhs == null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (rhs == null)_0       -                             
+  Row   2:    ***0***  (rhs == null)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       166 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       166 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       187 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       187 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       207 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       207 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+
+
+
+
+----------------Focused Condition View-------------------
+Line       30 Item    1  (size(this.item_q) > 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (size(this.item_q) > 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:    ***0***  (size(this.item_q) > 0)_0  -                             
+  Row   2:          1  (size(this.item_q) > 0)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       94 Item    1  (cw_actual == cw_expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+  (cw_actual == cw_expected)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:    ***0***  (cw_actual == cw_expected)_0  -                             
+  Row   2:          1  (cw_actual == cw_expected)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       103 Item    1  (alu_actual == alu_expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                    Input Term   Covered  Reason for no coverage   Hint
+                   -----------  --------  -----------------------  --------------
+  (alu_actual == alu_expected)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                      Non-masking condition(s)      
+ ---------  ---------  --------------------            -------------------------     
+  Row   1:    ***0***  (alu_actual == alu_expected)_0  -                             
+  Row   2:          1  (alu_actual == alu_expected)_1  -                             
+
+
+
+
+
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    93.77%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins        195       139        56    71.28%
 ----------------------------------------------------------------------------------------------------------
 Covergroup                                             Metric       Goal       Bins    Status               
                                                                                                          
 ----------------------------------------------------------------------------------------------------------
- TYPE /fsm_pkg/coverage/cg                            100.00%        100          -    Covered              
-    covered/total bins:                                   117        117          -                      
-    missing/total bins:                                     0        117          -                      
-    % Hit:                                            100.00%        100          -                      
+ TYPE /fsm_pkg/coverage/cg                             93.77%        100          -    Uncovered            
+    covered/total bins:                                   139        195          -                      
+    missing/total bins:                                    56        195          -                      
+    % Hit:                                             71.28%        100          -                      
     Coverpoint funcc                                  100.00%        100          -    Covered              
         covered/total bins:                                 5          5          -                      
         missing/total bins:                                 0          5          -                      
         % Hit:                                        100.00%        100          -                      
-        bin add                                           390          1          -    Covered              
-        bin sub                                           437          1          -    Covered              
-        bin andd                                          394          1          -    Covered              
-        bin orr                                           396          1          -    Covered              
-        bin nop                                          1383          1          -    Covered              
-        default bin others                                  0                     -    ZERO                 
     Coverpoint opcodee                                100.00%        100          -    Covered              
+        covered/total bins:                                18         18          -                      
+        missing/total bins:                                 0         18          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst                                    100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode                                 100.00%        100          -    Covered              
         covered/total bins:                                15         15          -                      
         missing/total bins:                                 0         15          -                      
         % Hit:                                        100.00%        100          -                      
-        bin rtype                                        1119          1          -    Covered              
-        bin addi1                                         162          1          -    Covered              
-        bin subi1                                         141          1          -    Covered              
-        bin and1                                          143          1          -    Covered              
-        bin ori1                                          122          1          -    Covered              
-        bin addi2                                         141          1          -    Covered              
-        bin subi2                                         129          1          -    Covered              
-        bin andi2                                         133          1          -    Covered              
-        bin ori2                                          135          1          -    Covered              
-        bin mov                                           131          1          -    Covered              
-        bin s_reg1                                        132          1          -    Covered              
-        bin s_reg2                                        115          1          -    Covered              
-        bin s_mem                                         129          1          -    Covered              
-        bin l_mem1                                        140          1          -    Covered              
-        bin l_mem2                                        128          1          -    Covered              
+    Coverpoint func                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr                                           62.66%        100          -    Uncovered            
+        covered/total bins:                                94        150          -                      
+        missing/total bins:                                56        150          -                      
+        % Hit:                                         62.66%        100          -                      
+ Covergroup instance \/fsm_pkg::coverage::cg           93.77%        100          -    Uncovered            
+    covered/total bins:                                   139        195          -                      
+    missing/total bins:                                    56        195          -                      
+    % Hit:                                             71.28%        100          -                      
+    Coverpoint funcc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add                                           369          1          -    Covered              
+        bin sub                                           398          1          -    Covered              
+        bin andd                                          425          1          -    Covered              
+        bin orr                                           382          1          -    Covered              
+        bin nop                                          1426          1          -    Covered              
         default bin others                                  0                     -    ZERO                 
-    Coverpoint b_cp                                   100.00%        100          -    Covered              
+    Coverpoint opcodee                                100.00%        100          -    Covered              
+        covered/total bins:                                18         18          -                      
+        missing/total bins:                                 0         18          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rtype                                        1139          1          -    Covered              
+        bin addi1                                         143          1          -    Covered              
+        bin subi1                                         127          1          -    Covered              
+        bin and1                                          121          1          -    Covered              
+        bin ori1                                          135          1          -    Covered              
+        bin addi2                                         151          1          -    Covered              
+        bin subi2                                         145          1          -    Covered              
+        bin andi2                                         146          1          -    Covered              
+        bin ori2                                          128          1          -    Covered              
+        bin mov                                           120          1          -    Covered              
+        bin s_reg1                                        116          1          -    Covered              
+        bin s_reg2                                        139          1          -    Covered              
+        bin s_mem                                         120          1          -    Covered              
+        bin l_mem1                                        147          1          -    Covered              
+        bin l_mem2                                        123          1          -    Covered              
+        bin mov_add                                        10          1          -    Covered              
+        bin mov_mem                                         5          1          -    Covered              
+        bin rty_mem                                        78          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint rst                                    100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
@@ -48,109 +961,854 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                15         15          -                      
         missing/total bins:                                 0         15          -                      
         % Hit:                                        100.00%        100          -                      
-        bin auto[RTYPE]                                  1119          1          -    Covered              
-        bin auto[ADDI1]                                   162          1          -    Covered              
-        bin auto[SUBI1]                                   141          1          -    Covered              
-        bin auto[AND1]                                    143          1          -    Covered              
-        bin auto[ORI1]                                    122          1          -    Covered              
-        bin auto[ADDI2]                                   141          1          -    Covered              
-        bin auto[SUBI2]                                   129          1          -    Covered              
-        bin auto[ANDI2]                                   133          1          -    Covered              
-        bin auto[ORI2]                                    135          1          -    Covered              
-        bin auto[MOV]                                     131          1          -    Covered              
-        bin auto[S_REG1]                                  132          1          -    Covered              
-        bin auto[S_REG2]                                  115          1          -    Covered              
-        bin auto[S_MEM]                                   129          1          -    Covered              
-        bin auto[L_MEM1]                                  140          1          -    Covered              
-        bin auto[L_MEM2]                                  128          1          -    Covered              
+        bin auto[RTYPE]                                  1139          1          -    Covered              
+        bin auto[ADDI1]                                   143          1          -    Covered              
+        bin auto[SUBI1]                                   127          1          -    Covered              
+        bin auto[AND1]                                    121          1          -    Covered              
+        bin auto[ORI1]                                    135          1          -    Covered              
+        bin auto[ADDI2]                                   151          1          -    Covered              
+        bin auto[SUBI2]                                   145          1          -    Covered              
+        bin auto[ANDI2]                                   146          1          -    Covered              
+        bin auto[ORI2]                                    128          1          -    Covered              
+        bin auto[MOV]                                     120          1          -    Covered              
+        bin auto[S_REG1]                                  116          1          -    Covered              
+        bin auto[S_REG2]                                  139          1          -    Covered              
+        bin auto[S_MEM]                                   120          1          -    Covered              
+        bin auto[L_MEM1]                                  147          1          -    Covered              
+        bin auto[L_MEM2]                                  123          1          -    Covered              
     Coverpoint func                                   100.00%        100          -    Covered              
         covered/total bins:                                 5          5          -                      
         missing/total bins:                                 0          5          -                      
         % Hit:                                        100.00%        100          -                      
-        bin auto[ADD]                                     390          1          -    Covered              
-        bin auto[SUB]                                     437          1          -    Covered              
-        bin auto[AND]                                     394          1          -    Covered              
-        bin auto[OR]                                      396          1          -    Covered              
-        bin auto[NOP]                                    1383          1          -    Covered              
-    Cross cr                                          100.00%        100          -    Covered              
-        covered/total bins:                                75         75          -                      
-        missing/total bins:                                 0         75          -                      
-        % Hit:                                        100.00%        100          -                      
+        bin auto[ADD]                                     369          1          -    Covered              
+        bin auto[SUB]                                     398          1          -    Covered              
+        bin auto[AND]                                     425          1          -    Covered              
+        bin auto[OR]                                      382          1          -    Covered              
+        bin auto[NOP]                                    1426          1          -    Covered              
+    Cross cr                                           62.66%        100          -    Uncovered            
+        covered/total bins:                                94        150          -                      
+        missing/total bins:                                56        150          -                      
+        % Hit:                                         62.66%        100          -                      
         Auto, Default and User Defined Bins:
-            bin <auto[L_MEM2],auto[NOP]>                   78          1          -    Covered              
-            bin <auto[L_MEM1],auto[NOP]>                   74          1          -    Covered              
-            bin <auto[S_MEM],auto[NOP]>                    66          1          -    Covered              
-            bin <auto[S_REG2],auto[NOP]>                   64          1          -    Covered              
-            bin <auto[S_REG1],auto[NOP]>                   78          1          -    Covered              
-            bin <auto[MOV],auto[NOP]>                      81          1          -    Covered              
-            bin <auto[ORI2],auto[NOP]>                     77          1          -    Covered              
-            bin <auto[ANDI2],auto[NOP]>                    74          1          -    Covered              
-            bin <auto[SUBI2],auto[NOP]>                    80          1          -    Covered              
-            bin <auto[ADDI2],auto[NOP]>                    78          1          -    Covered              
-            bin <auto[ORI1],auto[NOP]>                     71          1          -    Covered              
-            bin <auto[AND1],auto[NOP]>                     89          1          -    Covered              
-            bin <auto[SUBI1],auto[NOP]>                    88          1          -    Covered              
-            bin <auto[ADDI1],auto[NOP]>                   103          1          -    Covered              
-            bin <auto[RTYPE],auto[NOP]>                   282          1          -    Covered              
-            bin <auto[L_MEM2],auto[OR]>                    10          1          -    Covered              
-            bin <auto[L_MEM1],auto[OR]>                    17          1          -    Covered              
-            bin <auto[S_MEM],auto[OR]>                     17          1          -    Covered              
-            bin <auto[S_REG2],auto[OR]>                    10          1          -    Covered              
-            bin <auto[S_REG1],auto[OR]>                    10          1          -    Covered              
-            bin <auto[MOV],auto[OR]>                        9          1          -    Covered              
-            bin <auto[ORI2],auto[OR]>                      13          1          -    Covered              
-            bin <auto[ANDI2],auto[OR]>                     14          1          -    Covered              
-            bin <auto[SUBI2],auto[OR]>                     16          1          -    Covered              
-            bin <auto[ADDI2],auto[OR]>                     14          1          -    Covered              
-            bin <auto[ORI1],auto[OR]>                      13          1          -    Covered              
-            bin <auto[AND1],auto[OR]>                      21          1          -    Covered              
-            bin <auto[SUBI1],auto[OR]>                     17          1          -    Covered              
-            bin <auto[ADDI1],auto[OR]>                     12          1          -    Covered              
-            bin <auto[RTYPE],auto[OR]>                    203          1          -    Covered              
-            bin <auto[L_MEM2],auto[AND]>                   15          1          -    Covered              
-            bin <auto[L_MEM1],auto[AND]>                   17          1          -    Covered              
-            bin <auto[S_MEM],auto[AND]>                    10          1          -    Covered              
-            bin <auto[S_REG2],auto[AND]>                   13          1          -    Covered              
-            bin <auto[S_REG1],auto[AND]>                   11          1          -    Covered              
-            bin <auto[MOV],auto[AND]>                      14          1          -    Covered              
-            bin <auto[ORI2],auto[AND]>                     13          1          -    Covered              
-            bin <auto[ANDI2],auto[AND]>                    11          1          -    Covered              
-            bin <auto[SUBI2],auto[AND]>                    13          1          -    Covered              
-            bin <auto[ADDI2],auto[AND]>                    17          1          -    Covered              
-            bin <auto[ORI1],auto[AND]>                     14          1          -    Covered              
-            bin <auto[AND1],auto[AND]>                     12          1          -    Covered              
-            bin <auto[SUBI1],auto[AND]>                     6          1          -    Covered              
-            bin <auto[ADDI1],auto[AND]>                    12          1          -    Covered              
-            bin <auto[RTYPE],auto[AND]>                   216          1          -    Covered              
-            bin <auto[L_MEM2],auto[SUB]>                   18          1          -    Covered              
-            bin <auto[L_MEM1],auto[SUB]>                   15          1          -    Covered              
-            bin <auto[S_MEM],auto[SUB]>                    11          1          -    Covered              
-            bin <auto[S_REG2],auto[SUB]>                   18          1          -    Covered              
-            bin <auto[S_REG1],auto[SUB]>                   21          1          -    Covered              
-            bin <auto[MOV],auto[SUB]>                      13          1          -    Covered              
-            bin <auto[ORI2],auto[SUB]>                     18          1          -    Covered              
-            bin <auto[ANDI2],auto[SUB]>                    20          1          -    Covered              
-            bin <auto[SUBI2],auto[SUB]>                     9          1          -    Covered              
-            bin <auto[ADDI2],auto[SUB]>                    13          1          -    Covered              
-            bin <auto[ORI1],auto[SUB]>                     14          1          -    Covered              
-            bin <auto[AND1],auto[SUB]>                     11          1          -    Covered              
-            bin <auto[SUBI1],auto[SUB]>                    14          1          -    Covered              
-            bin <auto[ADDI1],auto[SUB]>                    17          1          -    Covered              
-            bin <auto[RTYPE],auto[SUB]>                   225          1          -    Covered              
-            bin <auto[L_MEM2],auto[ADD]>                    7          1          -    Covered              
-            bin <auto[L_MEM1],auto[ADD]>                   17          1          -    Covered              
-            bin <auto[S_MEM],auto[ADD]>                    25          1          -    Covered              
-            bin <auto[S_REG2],auto[ADD]>                   10          1          -    Covered              
-            bin <auto[S_REG1],auto[ADD]>                   12          1          -    Covered              
-            bin <auto[MOV],auto[ADD]>                      14          1          -    Covered              
-            bin <auto[ORI2],auto[ADD]>                     14          1          -    Covered              
-            bin <auto[ANDI2],auto[ADD]>                    14          1          -    Covered              
-            bin <auto[SUBI2],auto[ADD]>                    11          1          -    Covered              
-            bin <auto[ADDI2],auto[ADD]>                    19          1          -    Covered              
-            bin <auto[ORI1],auto[ADD]>                     10          1          -    Covered              
-            bin <auto[AND1],auto[ADD]>                     10          1          -    Covered              
-            bin <auto[SUBI1],auto[ADD]>                    16          1          -    Covered              
-            bin <auto[ADDI1],auto[ADD]>                    18          1          -    Covered              
-            bin <auto[RTYPE],auto[ADD]>                   193          1          -    Covered              
+            bin <auto[L_MEM2],auto[NOP],one>               61          1          -    Covered              
+            bin <auto[L_MEM1],auto[NOP],one>               72          1          -    Covered              
+            bin <auto[S_MEM],auto[NOP],one>                52          1          -    Covered              
+            bin <auto[S_REG2],auto[NOP],one>               70          1          -    Covered              
+            bin <auto[S_REG1],auto[NOP],one>               55          1          -    Covered              
+            bin <auto[MOV],auto[NOP],one>                  61          1          -    Covered              
+            bin <auto[ORI2],auto[NOP],one>                 67          1          -    Covered              
+            bin <auto[ANDI2],auto[NOP],one>                85          1          -    Covered              
+            bin <auto[SUBI2],auto[NOP],one>                71          1          -    Covered              
+            bin <auto[ADDI2],auto[NOP],one>                75          1          -    Covered              
+            bin <auto[ORI1],auto[NOP],one>                 66          1          -    Covered              
+            bin <auto[AND1],auto[NOP],one>                 62          1          -    Covered              
+            bin <auto[SUBI1],auto[NOP],one>                74          1          -    Covered              
+            bin <auto[ADDI1],auto[NOP],one>                65          1          -    Covered              
+            bin <auto[RTYPE],auto[NOP],one>               287          1          -    Covered              
+            bin <auto[RTYPE],auto[OR],one>                180          1          -    Covered              
+            bin <auto[RTYPE],auto[AND],one>               207          1          -    Covered              
+            bin <auto[RTYPE],auto[SUB],one>               209          1          -    Covered              
+            bin <auto[RTYPE],auto[ADD],one>               181          1          -    Covered              
+            bin <auto[L_MEM2],auto[NOP],zero>              10          1          -    Covered              
+            bin <auto[L_MEM1],auto[NOP],zero>              19          1          -    Covered              
+            bin <auto[S_MEM],auto[NOP],zero>               15          1          -    Covered              
+            bin <auto[S_REG2],auto[NOP],zero>              14          1          -    Covered              
+            bin <auto[S_REG1],auto[NOP],zero>              13          1          -    Covered              
+            bin <auto[MOV],auto[NOP],zero>                 15          1          -    Covered              
+            bin <auto[ORI2],auto[NOP],zero>                 8          1          -    Covered              
+            bin <auto[ANDI2],auto[NOP],zero>                9          1          -    Covered              
+            bin <auto[SUBI2],auto[NOP],zero>               16          1          -    Covered              
+            bin <auto[ADDI2],auto[NOP],zero>               14          1          -    Covered              
+            bin <auto[ORI1],auto[NOP],zero>                 9          1          -    Covered              
+            bin <auto[AND1],auto[NOP],zero>                13          1          -    Covered              
+            bin <auto[SUBI1],auto[NOP],zero>               15          1          -    Covered              
+            bin <auto[ADDI1],auto[NOP],zero>               16          1          -    Covered              
+            bin <auto[RTYPE],auto[NOP],zero>               17          1          -    Covered              
+            bin <auto[L_MEM2],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[L_MEM1],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[S_MEM],auto[OR],zero>                13          1          -    Covered              
+            bin <auto[S_REG2],auto[OR],zero>               11          1          -    Covered              
+            bin <auto[S_REG1],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[MOV],auto[OR],zero>                  16          1          -    Covered              
+            bin <auto[ORI2],auto[OR],zero>                 13          1          -    Covered              
+            bin <auto[ANDI2],auto[OR],zero>                18          1          -    Covered              
+            bin <auto[SUBI2],auto[OR],zero>                12          1          -    Covered              
+            bin <auto[ADDI2],auto[OR],zero>                20          1          -    Covered              
+            bin <auto[ORI1],auto[OR],zero>                 16          1          -    Covered              
+            bin <auto[AND1],auto[OR],zero>                 10          1          -    Covered              
+            bin <auto[SUBI1],auto[OR],zero>                10          1          -    Covered              
+            bin <auto[ADDI1],auto[OR],zero>                10          1          -    Covered              
+            bin <auto[RTYPE],auto[OR],zero>                14          1          -    Covered              
+            bin <auto[L_MEM2],auto[AND],zero>              16          1          -    Covered              
+            bin <auto[L_MEM1],auto[AND],zero>              17          1          -    Covered              
+            bin <auto[S_MEM],auto[AND],zero>               14          1          -    Covered              
+            bin <auto[S_REG2],auto[AND],zero>              15          1          -    Covered              
+            bin <auto[S_REG1],auto[AND],zero>              13          1          -    Covered              
+            bin <auto[MOV],auto[AND],zero>                  9          1          -    Covered              
+            bin <auto[ORI2],auto[AND],zero>                15          1          -    Covered              
+            bin <auto[ANDI2],auto[AND],zero>               12          1          -    Covered              
+            bin <auto[SUBI2],auto[AND],zero>               12          1          -    Covered              
+            bin <auto[ADDI2],auto[AND],zero>               15          1          -    Covered              
+            bin <auto[ORI1],auto[AND],zero>                20          1          -    Covered              
+            bin <auto[AND1],auto[AND],zero>                12          1          -    Covered              
+            bin <auto[SUBI1],auto[AND],zero>               10          1          -    Covered              
+            bin <auto[ADDI1],auto[AND],zero>               18          1          -    Covered              
+            bin <auto[RTYPE],auto[AND],zero>               20          1          -    Covered              
+            bin <auto[L_MEM2],auto[SUB],zero>              12          1          -    Covered              
+            bin <auto[L_MEM1],auto[SUB],zero>              13          1          -    Covered              
+            bin <auto[S_MEM],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[S_REG2],auto[SUB],zero>              18          1          -    Covered              
+            bin <auto[S_REG1],auto[SUB],zero>               5          1          -    Covered              
+            bin <auto[MOV],auto[SUB],zero>                  7          1          -    Covered              
+            bin <auto[ORI2],auto[SUB],zero>                14          1          -    Covered              
+            bin <auto[ANDI2],auto[SUB],zero>               13          1          -    Covered              
+            bin <auto[SUBI2],auto[SUB],zero>               20          1          -    Covered              
+            bin <auto[ADDI2],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[ORI1],auto[SUB],zero>                11          1          -    Covered              
+            bin <auto[AND1],auto[SUB],zero>                 9          1          -    Covered              
+            bin <auto[SUBI1],auto[SUB],zero>                9          1          -    Covered              
+            bin <auto[ADDI1],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[RTYPE],auto[SUB],zero>               10          1          -    Covered              
+            bin <auto[L_MEM2],auto[ADD],zero>              11          1          -    Covered              
+            bin <auto[L_MEM1],auto[ADD],zero>              13          1          -    Covered              
+            bin <auto[S_MEM],auto[ADD],zero>               10          1          -    Covered              
+            bin <auto[S_REG2],auto[ADD],zero>              11          1          -    Covered              
+            bin <auto[S_REG1],auto[ADD],zero>              17          1          -    Covered              
+            bin <auto[MOV],auto[ADD],zero>                 12          1          -    Covered              
+            bin <auto[ORI2],auto[ADD],zero>                11          1          -    Covered              
+            bin <auto[ANDI2],auto[ADD],zero>                9          1          -    Covered              
+            bin <auto[SUBI2],auto[ADD],zero>               14          1          -    Covered              
+            bin <auto[ADDI2],auto[ADD],zero>               11          1          -    Covered              
+            bin <auto[ORI1],auto[ADD],zero>                13          1          -    Covered              
+            bin <auto[AND1],auto[ADD],zero>                15          1          -    Covered              
+            bin <auto[SUBI1],auto[ADD],zero>                9          1          -    Covered              
+            bin <auto[ADDI1],auto[ADD],zero>               18          1          -    Covered              
+            bin <auto[RTYPE],auto[ADD],zero>               14          1          -    Covered              
+            bin <auto[L_MEM2],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[MOV],auto[OR],one>                    0          1          1    ZERO                 
+            bin <auto[ORI2],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ORI1],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[AND1],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[AND],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[SUB],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[ADD],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[ADD],one>                 0          1          1    ZERO                 
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     16         0        16     0.00%
 
-TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+================================Expression Details================================
+
+Expression Coverage for instance /fsm_pkg --
+
+  File ../tb/fsm_sequences.svh
+----------------Focused Expression View-----------------
+Line       76 Item    1  (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && (compared_transaction_h.en3 == this.en3) && (compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))
+Expression totals: 0 of 16 input terms covered = 0.00%
+
+                                      Input Term   Covered  Reason for no coverage   Hint
+                                     -----------  --------  -----------------------  --------------
+                   do_compare(this,rhs,comparer)         N  No hits                  Hit '_0' and '_1'
+      (compared_transaction_h.func == this.func)         N  No hits                  Hit '_0' and '_1'
+  (compared_transaction_h.opcode == this.opcode)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.rf1 == this.rf1)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.rf2 == this.rf2)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.en1 == this.en1)         N  No hits                  Hit '_0' and '_1'
+          (compared_transaction_h.s1 == this.s1)         N  No hits                  Hit '_0' and '_1'
+          (compared_transaction_h.s2 == this.s2)         N  No hits                  Hit '_0' and '_1'
+      (compared_transaction_h.alu1 == this.alu1)         N  No hits                  Hit '_0' and '_1'
+      (compared_transaction_h.alu2 == this.alu2)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.en2 == this.en2)         N  No hits                  Hit '_0' and '_1'
+          (compared_transaction_h.rm == this.rm)         N  No hits                  Hit '_0' and '_1'
+          (compared_transaction_h.wm == this.wm)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.en3 == this.en3)         N  No hits                  Hit '_0' and '_1'
+          (compared_transaction_h.s3 == this.s3)         N  No hits                  Hit '_0' and '_1'
+        (compared_transaction_h.wf1 == this.wf1)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target                                        Non-masking condition(s)      
+ ---------  ---------  --------------------                              -------------------------     
+  Row   1:    ***0***  do_compare(this,rhs,comparer)_0                   -                             
+  Row   2:    ***0***  do_compare(this,rhs,comparer)_1                   ((compared_transaction_h.func == this.func) && ((compared_transaction_h.opcode == this.opcode) && ((compared_transaction_h.rf1 == this.rf1) && ((compared_transaction_h.rf2 == this.rf2) && ((compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))))))))))
+  Row   3:    ***0***  (compared_transaction_h.func == this.func)_0      do_compare(this,rhs,comparer) 
+  Row   4:    ***0***  (compared_transaction_h.func == this.func)_1      (do_compare(this,rhs,comparer) && ((compared_transaction_h.opcode == this.opcode) && ((compared_transaction_h.rf1 == this.rf1) && ((compared_transaction_h.rf2 == this.rf2) && ((compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))))))))))
+  Row   5:    ***0***  (compared_transaction_h.opcode == this.opcode)_0  (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func))
+  Row   6:    ***0***  (compared_transaction_h.opcode == this.opcode)_1  (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && ((compared_transaction_h.rf1 == this.rf1) && ((compared_transaction_h.rf2 == this.rf2) && ((compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))))))))))))
+  Row   7:    ***0***  (compared_transaction_h.rf1 == this.rf1)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode))
+  Row   8:    ***0***  (compared_transaction_h.rf1 == this.rf1)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && ((compared_transaction_h.rf2 == this.rf2) && ((compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))))))))
+  Row   9:    ***0***  (compared_transaction_h.rf2 == this.rf2)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1))
+ Row   10:    ***0***  (compared_transaction_h.rf2 == this.rf2)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && ((compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))))))))))
+ Row   11:    ***0***  (compared_transaction_h.en1 == this.en1)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2))
+ Row   12:    ***0***  (compared_transaction_h.en1 == this.en1)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && ((compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))))))
+ Row   13:    ***0***  (compared_transaction_h.s1 == this.s1)_0          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1))
+ Row   14:    ***0***  (compared_transaction_h.s1 == this.s1)_1          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && ((compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))))))))
+ Row   15:    ***0***  (compared_transaction_h.s2 == this.s2)_0          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1))
+ Row   16:    ***0***  (compared_transaction_h.s2 == this.s2)_1          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && ((compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))))
+ Row   17:    ***0***  (compared_transaction_h.alu1 == this.alu1)_0      (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2))
+ Row   18:    ***0***  (compared_transaction_h.alu1 == this.alu1)_1      (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && ((compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))))))
+ Row   19:    ***0***  (compared_transaction_h.alu2 == this.alu2)_0      (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1))
+ Row   20:    ***0***  (compared_transaction_h.alu2 == this.alu2)_1      (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && ((compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))))
+ Row   21:    ***0***  (compared_transaction_h.en2 == this.en2)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2))
+ Row   22:    ***0***  (compared_transaction_h.en2 == this.en2)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && ((compared_transaction_h.rm == this.rm) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))))
+ Row   23:    ***0***  (compared_transaction_h.rm == this.rm)_0          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2))
+ Row   24:    ***0***  (compared_transaction_h.rm == this.rm)_1          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && ((compared_transaction_h.wm == this.wm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))))
+ Row   25:    ***0***  (compared_transaction_h.wm == this.wm)_0          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm))
+ Row   26:    ***0***  (compared_transaction_h.wm == this.wm)_1          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && ((compared_transaction_h.en3 == this.en3) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1))))
+ Row   27:    ***0***  (compared_transaction_h.en3 == this.en3)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm))
+ Row   28:    ***0***  (compared_transaction_h.en3 == this.en3)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && ((compared_transaction_h.s3 == this.s3) && (compared_transaction_h.wf1 == this.wf1)))
+ Row   29:    ***0***  (compared_transaction_h.s3 == this.s3)_0          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && (compared_transaction_h.en3 == this.en3))
+ Row   30:    ***0***  (compared_transaction_h.s3 == this.s3)_1          (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && (compared_transaction_h.en3 == this.en3) && (compared_transaction_h.wf1 == this.wf1))
+ Row   31:    ***0***  (compared_transaction_h.wf1 == this.wf1)_0        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && (compared_transaction_h.en3 == this.en3) && (compared_transaction_h.s3 == this.s3))
+ Row   32:    ***0***  (compared_transaction_h.wf1 == this.wf1)_1        (do_compare(this,rhs,comparer) && (compared_transaction_h.func == this.func) && (compared_transaction_h.opcode == this.opcode) && (compared_transaction_h.rf1 == this.rf1) && (compared_transaction_h.rf2 == this.rf2) && (compared_transaction_h.en1 == this.en1) && (compared_transaction_h.s1 == this.s1) && (compared_transaction_h.s2 == this.s2) && (compared_transaction_h.alu1 == this.alu1) && (compared_transaction_h.alu2 == this.alu2) && (compared_transaction_h.en2 == this.en2) && (compared_transaction_h.rm == this.rm) && (compared_transaction_h.wm == this.wm) && (compared_transaction_h.en3 == this.en3) && (compared_transaction_h.s3 == this.s3))
+
+
+
+
+
+
+
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     296       216        80    72.97%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fsm_pkg --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/fsm_sequences.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                    ***0***     
+    2               4                    ***0***     
+    2               5                    ***0***     
+    2               6                       3000     
+    2               7                    ***0***     
+    2               8                    ***0***     
+    2               9                    ***0***     
+    2              10                    ***0***     
+    35              1                       9002     
+    42              1                    ***0***     
+    45              1                    ***0***     
+    47              1                    ***0***     
+    49              1                    ***0***     
+    50              1                    ***0***     
+    51              1                    ***0***     
+    52              1                    ***0***     
+    53              1                    ***0***     
+    54              1                    ***0***     
+    55              1                    ***0***     
+    56              1                    ***0***     
+    57              1                    ***0***     
+    58              1                    ***0***     
+    59              1                    ***0***     
+    60              1                    ***0***     
+    61              1                    ***0***     
+    62              1                    ***0***     
+    63              1                    ***0***     
+    71              1                    ***0***     
+    74              1                    ***0***     
+    76              1                    ***0***     
+    93              1                    ***0***     
+    98              1                    ***0***     
+    100             1                    ***0***     
+    105             1                       2278     
+    106             1                        286     
+    107             1                        254     
+    108             1                        242     
+    109             1                        270     
+    110             1                        302     
+    111             1                        290     
+    112             1                        292     
+    113             1                        256     
+    114             1                        240     
+    115             1                        232     
+    116             1                        278     
+    117             1                        240     
+    118             1                        294     
+    119             1                        246     
+    125             1                       4556     
+    126             1                        572     
+    127             1                        508     
+    128             1                        484     
+    129             1                        540     
+    130             1                        604     
+    131             1                        580     
+    132             1                        584     
+    133             1                        512     
+    134             1                        480     
+    135             1                        464     
+    136             1                        556     
+    137             1                        480     
+    138             1                        588     
+    139             1                        492     
+    145             1                        738     
+    146             1                        796     
+    147             1                        850     
+    148             1                        764     
+    149             1                       2852     
+    155             1                        738     
+    156             1                        796     
+    157             1                        850     
+    158             1                        764     
+    159             1                       2852     
+    166             1                    ***0***     
+    166             2                    ***0***     
+    166             3                    ***0***     
+    166             4                    ***0***     
+    166             5                    ***0***     
+    166             6                       3000     
+    166             7                    ***0***     
+    166             8                    ***0***     
+    166             9                    ***0***     
+    166            10                    ***0***     
+    171             1                       1000     
+    175             1                       1000     
+    176             1                       1000     
+    177             1                       1000     
+    179             1                       1000     
+    180             1                       1000     
+    181             1                       1000     
+    187             1                    ***0***     
+    187             2                    ***0***     
+    187             3                    ***0***     
+    187             4                    ***0***     
+    187             5                    ***0***     
+    187             6                       3000     
+    187             7                    ***0***     
+    187             8                    ***0***     
+    187             9                    ***0***     
+    187            10                    ***0***     
+    192             1                       1000     
+    196             1                       1000     
+    197             1                       1000     
+    198             1                       1000     
+    200             1                       1000     
+    201             1                       1000     
+    202             1                       1000     
+    207             1                    ***0***     
+    207             2                    ***0***     
+    207             3                    ***0***     
+    207             4                    ***0***     
+    207             5                    ***0***     
+    207             6                       3000     
+    207             7                    ***0***     
+    207             8                    ***0***     
+    207             9                    ***0***     
+    207            10                    ***0***     
+    212             1                       1000     
+    216             1                       1000     
+    217             1                       1000     
+    218             1                       1000     
+    220             1                       1000     
+    221             1                       1000     
+    227             1                    ***0***     
+    227             2                    ***0***     
+    227             3                          1     
+    230             1                          1     
+    234             1                          1     
+    238             1                          1     
+  File ../tb/fsm_driver.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                       6001     
+    8               1                          1     
+    12              1                          1     
+    13              1                          1     
+    17              1                          1     
+    18              1                    ***0***     
+    20              1                          1     
+    21              1                       3001     
+    23              1                       3001     
+    24              1                       3000     
+    25              1                       3000     
+    26              1                       3000     
+    37              1                       3000     
+    38              1                       3000     
+    39              1                       3000     
+  File ../tb/fsm_monitor.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                       6001     
+    11              1                          1     
+    15              1                          1     
+    16              1                          1     
+    17              1                          1     
+    21              1                          1     
+    23              1                          1     
+    25              1                       3001     
+    27              1                       3001     
+    28              1                       3000     
+    29              1                       3000     
+    30              1                       3000     
+    31              1                       3000     
+    38              1                       3000     
+    39              1                       3000     
+    40              1                       3000     
+    41              1                       3000     
+    43              1                       3000     
+    44              1                       3000     
+    45              1                       3000     
+    46              1                       3000     
+    47              1                       3000     
+    48              1                       3000     
+    50              1                       3000     
+    51              1                       3000     
+    52              1                       3000     
+    53              1                       3000     
+    54              1                       3000     
+    55              1                       3000     
+    57              1                       3000     
+  File ../tb/fsm_agent.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                          1     
+    11              1                          1     
+    15              1                          1     
+    16              1                          1     
+    17              1                          1     
+    18              1                          1     
+    19              1                          1     
+    23              1                          1     
+    24              1                          1     
+  File ../tb/fsm_scoreboard.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                      12001     
+    10              1                          1     
+    14              1                          1     
+    15              1                          1     
+    16              1                          1     
+    20              1                       3000     
+    24              1                          1     
+    25              1                          1     
+    26              1                          1     
+    28              1                       3001     
+    31              1                       3000     
+    32              1                       3000     
+    45              1                       1139     
+    46              1                        143     
+    47              1                        127     
+    48              1                        121     
+    49              1                        135     
+    50              1                        151     
+    51              1                        145     
+    52              1                        146     
+    53              1                        128     
+    54              1                        120     
+    55              1                        116     
+    56              1                        139     
+    57              1                        120     
+    58              1                        147     
+    59              1                        123     
+    60              1                    ***0***     
+    67              1                        195     
+    68              1                        219     
+    69              1                        227     
+    70              1                        498     
+    73              1                        143     
+    74              1                        127     
+    75              1                        121     
+    76              1                        135     
+    77              1                        151     
+    78              1                        145     
+    79              1                        146     
+    80              1                        128     
+    81              1                        765     
+    85              1                       3000     
+    86              1                       3000     
+    89              1                       1000     
+    90              1                       1000     
+    95              1                       3000     
+    100             1                    ***0***     
+    104             1                       3000     
+    109             1                    ***0***     
+    113             1                       3000     
+  File ../tb/fsm_coverage.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                      12005     
+    56              1                          1     
+    57              1                          1     
+    61              1                          1     
+    62              1                          1     
+    63              1                          1     
+    67              1                       3000     
+    68              1                       3000     
+    69              1                       3000     
+    70              1                       3000     
+    72              1                       3000     
+    73              1                       3000     
+    74              1                       3000     
+    79              1                          1     
+    80              1                          1     
+    81              1                          1     
+  File ../tb/fsm_env.svh
+    2               1                    ***0***     
+    2               2                    ***0***     
+    2               3                          1     
+    10              1                          1     
+    14              1                          1     
+    15              1                          1     
+    16              1                          1     
+    17              1                          1     
+    22              1                          1     
+    23              1                          1     
+  File ../tb/fsm_test.svh
+    4               1                    ***0***     
+    4               2                    ***0***     
+    4               3                          4     
+    13              1                          1     
+    18              1                          1     
+    19              1                          1     
+    20              1                          1     
+    25              1                          1     
+    30              1                          1     
+    31              1                          1     
+    33              1                       1000     
+    35              1                       1000     
+    36              1                       1000     
+    37              1                       3000     
+    37              2                       3000     
+    39              1                       1000     
+    40              1                       1000     
+    41              1                       3000     
+    41              2                       3000     
+    43              1                       1000     
+    44              1                       1000     
+    45              1                       3000     
+    45              2                       3000     
+    48              1                          1     
+    49              1                          1     
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /fsm_pkg/coverage/cg                             93.77%        100          -    Uncovered            
+    covered/total bins:                                   139        195          -                      
+    missing/total bins:                                    56        195          -                      
+    % Hit:                                             71.28%        100          -                      
+    Coverpoint funcc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcodee                                100.00%        100          -    Covered              
+        covered/total bins:                                18         18          -                      
+        missing/total bins:                                 0         18          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst                                    100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint opcode                                 100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint func                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr                                           62.66%        100          -    Uncovered            
+        covered/total bins:                                94        150          -                      
+        missing/total bins:                                56        150          -                      
+        % Hit:                                         62.66%        100          -                      
+ Covergroup instance \/fsm_pkg::coverage::cg           93.77%        100          -    Uncovered            
+    covered/total bins:                                   139        195          -                      
+    missing/total bins:                                    56        195          -                      
+    % Hit:                                             71.28%        100          -                      
+    Coverpoint funcc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin add                                           369          1          -    Covered              
+        bin sub                                           398          1          -    Covered              
+        bin andd                                          425          1          -    Covered              
+        bin orr                                           382          1          -    Covered              
+        bin nop                                          1426          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint opcodee                                100.00%        100          -    Covered              
+        covered/total bins:                                18         18          -                      
+        missing/total bins:                                 0         18          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rtype                                        1139          1          -    Covered              
+        bin addi1                                         143          1          -    Covered              
+        bin subi1                                         127          1          -    Covered              
+        bin and1                                          121          1          -    Covered              
+        bin ori1                                          135          1          -    Covered              
+        bin addi2                                         151          1          -    Covered              
+        bin subi2                                         145          1          -    Covered              
+        bin andi2                                         146          1          -    Covered              
+        bin ori2                                          128          1          -    Covered              
+        bin mov                                           120          1          -    Covered              
+        bin s_reg1                                        116          1          -    Covered              
+        bin s_reg2                                        139          1          -    Covered              
+        bin s_mem                                         120          1          -    Covered              
+        bin l_mem1                                        147          1          -    Covered              
+        bin l_mem2                                        123          1          -    Covered              
+        bin mov_add                                        10          1          -    Covered              
+        bin mov_mem                                         5          1          -    Covered              
+        bin rty_mem                                        78          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint rst                                    100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                         1000          1          -    Covered              
+        bin one                                          2000          1          -    Covered              
+        default bin others                                  0                     -    ZERO                 
+    Coverpoint opcode                                 100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[RTYPE]                                  1139          1          -    Covered              
+        bin auto[ADDI1]                                   143          1          -    Covered              
+        bin auto[SUBI1]                                   127          1          -    Covered              
+        bin auto[AND1]                                    121          1          -    Covered              
+        bin auto[ORI1]                                    135          1          -    Covered              
+        bin auto[ADDI2]                                   151          1          -    Covered              
+        bin auto[SUBI2]                                   145          1          -    Covered              
+        bin auto[ANDI2]                                   146          1          -    Covered              
+        bin auto[ORI2]                                    128          1          -    Covered              
+        bin auto[MOV]                                     120          1          -    Covered              
+        bin auto[S_REG1]                                  116          1          -    Covered              
+        bin auto[S_REG2]                                  139          1          -    Covered              
+        bin auto[S_MEM]                                   120          1          -    Covered              
+        bin auto[L_MEM1]                                  147          1          -    Covered              
+        bin auto[L_MEM2]                                  123          1          -    Covered              
+    Coverpoint func                                   100.00%        100          -    Covered              
+        covered/total bins:                                 5          5          -                      
+        missing/total bins:                                 0          5          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[ADD]                                     369          1          -    Covered              
+        bin auto[SUB]                                     398          1          -    Covered              
+        bin auto[AND]                                     425          1          -    Covered              
+        bin auto[OR]                                      382          1          -    Covered              
+        bin auto[NOP]                                    1426          1          -    Covered              
+    Cross cr                                           62.66%        100          -    Uncovered            
+        covered/total bins:                                94        150          -                      
+        missing/total bins:                                56        150          -                      
+        % Hit:                                         62.66%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[L_MEM2],auto[NOP],one>               61          1          -    Covered              
+            bin <auto[L_MEM1],auto[NOP],one>               72          1          -    Covered              
+            bin <auto[S_MEM],auto[NOP],one>                52          1          -    Covered              
+            bin <auto[S_REG2],auto[NOP],one>               70          1          -    Covered              
+            bin <auto[S_REG1],auto[NOP],one>               55          1          -    Covered              
+            bin <auto[MOV],auto[NOP],one>                  61          1          -    Covered              
+            bin <auto[ORI2],auto[NOP],one>                 67          1          -    Covered              
+            bin <auto[ANDI2],auto[NOP],one>                85          1          -    Covered              
+            bin <auto[SUBI2],auto[NOP],one>                71          1          -    Covered              
+            bin <auto[ADDI2],auto[NOP],one>                75          1          -    Covered              
+            bin <auto[ORI1],auto[NOP],one>                 66          1          -    Covered              
+            bin <auto[AND1],auto[NOP],one>                 62          1          -    Covered              
+            bin <auto[SUBI1],auto[NOP],one>                74          1          -    Covered              
+            bin <auto[ADDI1],auto[NOP],one>                65          1          -    Covered              
+            bin <auto[RTYPE],auto[NOP],one>               287          1          -    Covered              
+            bin <auto[RTYPE],auto[OR],one>                180          1          -    Covered              
+            bin <auto[RTYPE],auto[AND],one>               207          1          -    Covered              
+            bin <auto[RTYPE],auto[SUB],one>               209          1          -    Covered              
+            bin <auto[RTYPE],auto[ADD],one>               181          1          -    Covered              
+            bin <auto[L_MEM2],auto[NOP],zero>              10          1          -    Covered              
+            bin <auto[L_MEM1],auto[NOP],zero>              19          1          -    Covered              
+            bin <auto[S_MEM],auto[NOP],zero>               15          1          -    Covered              
+            bin <auto[S_REG2],auto[NOP],zero>              14          1          -    Covered              
+            bin <auto[S_REG1],auto[NOP],zero>              13          1          -    Covered              
+            bin <auto[MOV],auto[NOP],zero>                 15          1          -    Covered              
+            bin <auto[ORI2],auto[NOP],zero>                 8          1          -    Covered              
+            bin <auto[ANDI2],auto[NOP],zero>                9          1          -    Covered              
+            bin <auto[SUBI2],auto[NOP],zero>               16          1          -    Covered              
+            bin <auto[ADDI2],auto[NOP],zero>               14          1          -    Covered              
+            bin <auto[ORI1],auto[NOP],zero>                 9          1          -    Covered              
+            bin <auto[AND1],auto[NOP],zero>                13          1          -    Covered              
+            bin <auto[SUBI1],auto[NOP],zero>               15          1          -    Covered              
+            bin <auto[ADDI1],auto[NOP],zero>               16          1          -    Covered              
+            bin <auto[RTYPE],auto[NOP],zero>               17          1          -    Covered              
+            bin <auto[L_MEM2],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[L_MEM1],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[S_MEM],auto[OR],zero>                13          1          -    Covered              
+            bin <auto[S_REG2],auto[OR],zero>               11          1          -    Covered              
+            bin <auto[S_REG1],auto[OR],zero>               13          1          -    Covered              
+            bin <auto[MOV],auto[OR],zero>                  16          1          -    Covered              
+            bin <auto[ORI2],auto[OR],zero>                 13          1          -    Covered              
+            bin <auto[ANDI2],auto[OR],zero>                18          1          -    Covered              
+            bin <auto[SUBI2],auto[OR],zero>                12          1          -    Covered              
+            bin <auto[ADDI2],auto[OR],zero>                20          1          -    Covered              
+            bin <auto[ORI1],auto[OR],zero>                 16          1          -    Covered              
+            bin <auto[AND1],auto[OR],zero>                 10          1          -    Covered              
+            bin <auto[SUBI1],auto[OR],zero>                10          1          -    Covered              
+            bin <auto[ADDI1],auto[OR],zero>                10          1          -    Covered              
+            bin <auto[RTYPE],auto[OR],zero>                14          1          -    Covered              
+            bin <auto[L_MEM2],auto[AND],zero>              16          1          -    Covered              
+            bin <auto[L_MEM1],auto[AND],zero>              17          1          -    Covered              
+            bin <auto[S_MEM],auto[AND],zero>               14          1          -    Covered              
+            bin <auto[S_REG2],auto[AND],zero>              15          1          -    Covered              
+            bin <auto[S_REG1],auto[AND],zero>              13          1          -    Covered              
+            bin <auto[MOV],auto[AND],zero>                  9          1          -    Covered              
+            bin <auto[ORI2],auto[AND],zero>                15          1          -    Covered              
+            bin <auto[ANDI2],auto[AND],zero>               12          1          -    Covered              
+            bin <auto[SUBI2],auto[AND],zero>               12          1          -    Covered              
+            bin <auto[ADDI2],auto[AND],zero>               15          1          -    Covered              
+            bin <auto[ORI1],auto[AND],zero>                20          1          -    Covered              
+            bin <auto[AND1],auto[AND],zero>                12          1          -    Covered              
+            bin <auto[SUBI1],auto[AND],zero>               10          1          -    Covered              
+            bin <auto[ADDI1],auto[AND],zero>               18          1          -    Covered              
+            bin <auto[RTYPE],auto[AND],zero>               20          1          -    Covered              
+            bin <auto[L_MEM2],auto[SUB],zero>              12          1          -    Covered              
+            bin <auto[L_MEM1],auto[SUB],zero>              13          1          -    Covered              
+            bin <auto[S_MEM],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[S_REG2],auto[SUB],zero>              18          1          -    Covered              
+            bin <auto[S_REG1],auto[SUB],zero>               5          1          -    Covered              
+            bin <auto[MOV],auto[SUB],zero>                  7          1          -    Covered              
+            bin <auto[ORI2],auto[SUB],zero>                14          1          -    Covered              
+            bin <auto[ANDI2],auto[SUB],zero>               13          1          -    Covered              
+            bin <auto[SUBI2],auto[SUB],zero>               20          1          -    Covered              
+            bin <auto[ADDI2],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[ORI1],auto[SUB],zero>                11          1          -    Covered              
+            bin <auto[AND1],auto[SUB],zero>                 9          1          -    Covered              
+            bin <auto[SUBI1],auto[SUB],zero>                9          1          -    Covered              
+            bin <auto[ADDI1],auto[SUB],zero>               16          1          -    Covered              
+            bin <auto[RTYPE],auto[SUB],zero>               10          1          -    Covered              
+            bin <auto[L_MEM2],auto[ADD],zero>              11          1          -    Covered              
+            bin <auto[L_MEM1],auto[ADD],zero>              13          1          -    Covered              
+            bin <auto[S_MEM],auto[ADD],zero>               10          1          -    Covered              
+            bin <auto[S_REG2],auto[ADD],zero>              11          1          -    Covered              
+            bin <auto[S_REG1],auto[ADD],zero>              17          1          -    Covered              
+            bin <auto[MOV],auto[ADD],zero>                 12          1          -    Covered              
+            bin <auto[ORI2],auto[ADD],zero>                11          1          -    Covered              
+            bin <auto[ANDI2],auto[ADD],zero>                9          1          -    Covered              
+            bin <auto[SUBI2],auto[ADD],zero>               14          1          -    Covered              
+            bin <auto[ADDI2],auto[ADD],zero>               11          1          -    Covered              
+            bin <auto[ORI1],auto[ADD],zero>                13          1          -    Covered              
+            bin <auto[AND1],auto[ADD],zero>                15          1          -    Covered              
+            bin <auto[SUBI1],auto[ADD],zero>                9          1          -    Covered              
+            bin <auto[ADDI1],auto[ADD],zero>               18          1          -    Covered              
+            bin <auto[RTYPE],auto[ADD],zero>               14          1          -    Covered              
+            bin <auto[L_MEM2],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[OR],one>                 0          1          1    ZERO                 
+            bin <auto[MOV],auto[OR],one>                    0          1          1    ZERO                 
+            bin <auto[ORI2],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ORI1],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[AND1],auto[OR],one>                   0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[OR],one>                  0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[AND],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[AND],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[AND],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[AND],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[SUB],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[SUB],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[SUB],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[SUB],one>                 0          1          1    ZERO                 
+            bin <auto[L_MEM2],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[L_MEM1],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[S_MEM],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[S_REG2],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[S_REG1],auto[ADD],one>                0          1          1    ZERO                 
+            bin <auto[MOV],auto[ADD],one>                   0          1          1    ZERO                 
+            bin <auto[ORI2],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[ANDI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[SUBI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI2],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ORI1],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[AND1],auto[ADD],one>                  0          1          1    ZERO                 
+            bin <auto[SUBI1],auto[ADD],one>                 0          1          1    ZERO                 
+            bin <auto[ADDI1],auto[ADD],one>                 0          1          1    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 93.77%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/fsm_pkg/rtype_sequence/body/immed__178
+                     ../tb/fsm_sequences.svh(178)
+                                                        0          1
+/fsm_pkg/itype_sequence/body/immed__199
+                     ../tb/fsm_sequences.svh(199)
+                                                        0          1
+/fsm_pkg/rst_sequence/body/immed__219
+                     ../tb/fsm_sequences.svh(219)
+                                                        0          1
+
+Total Coverage By Instance (filtered view): 64.54%
+
