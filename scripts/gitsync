@@ -18,7 +18,7 @@ then
 fi
 
 
-git config --global user.mail "s317015@studenti.polito.it"
-git config --global user.email "s317015@studenti.polito.it"
+#git config --global user.mail "s317015@studenti.polito.it"
+#git config --global user.email "s317015@studenti.polito.it"
 
 

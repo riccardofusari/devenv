@@ -1,15 +1,10 @@
 set clkname clock
-
 set modname counter
-
 set RTL_DIR ./
-
 set type lecture
-
 set report_default_significant_digits 4
 
 read_verilog $RTL_DIR/counter.v
-
 current_design $modname
 
 
@@ -51,7 +46,7 @@ set OP_DELAY [expr 0.1 + $DFF_SETUP]
 set_output_delay $OP_DELAY -clock $clkname [all_outputs]
 
 
-SET dr_cell_name DFFPOSX1
+set dr_cell_name DFFPOSX1
 set DR_CELL_PIN Q
 set_driving_cell -lib_cell "$DR_CELL_NAME" -pin "$DR_CELL_PIN" [remove_from_collection [all_inputs] $clkname]
 
