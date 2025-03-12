@@ -1,0 +1,5 @@
+#!/bin/sh
+
+make verilator-sim
+make app PROJECT=example_asm
+make run-app-verilator PROJECT=example_asm MAX_SIM_TIME=750us && gtkwave build/openhwgroup.org_systems_core-v-mini-mcu_0/sim-verilator/waveform.vcd
