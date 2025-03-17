@@ -13,45 +13,43 @@ module clk_stepping (
 );
 
     logic [31:0]    cycle_counter;
-    // logic           stopped;
     // logic        clk_en;
-    
+
     // State of the clock stepping module
     typedef enum logic [1:0] {
         IDLE,      // Clock stepping disabled or waiting for trigger
         RUNNING,   // Counting down cycles
         STOPPED    // Finished counting, clock stopped
     } stepping_state_e;
-    
 
     stepping_state_e current_state, next_state;
-    
+
     // State transition logic
     always_comb begin
         // next_state = current_state;
-        
+
         case (current_state)
             IDLE: begin
                 if (en_i && cycle_start_i /*&& !stopped*/) 
                     next_state = RUNNING;
             end
-            
+
             RUNNING: begin
                 if (cycle_counter == 0)
                     next_state = STOPPED;
                 else if (!en_i)
                     next_state = IDLE;
             end
-            
+
             STOPPED: begin
                 if (!en_i || cycle_start_i)
                     next_state = IDLE;
             end
-            
+
             default: next_state = IDLE;
         endcase
     end
-    
+
     // Counter logic and fsm
     always_ff @(posedge clk_i or negedge rst_ni) begin
         if (!rst_ni) begin
@@ -59,18 +57,18 @@ module clk_stepping (
             current_state <= IDLE;
         end else begin
             current_state <= next_state;
-            
+
             if (current_state == IDLE && next_state == RUNNING) begin
                 // Load counter when transitioning to RUNNING
                 cycle_counter <= cycles_i;
-                // stopped       <= 1'b0;
             end else if (current_state == RUNNING && cycle_counter > 0) begin
                 // Decrement counter while running
                 cycle_counter <= cycle_counter - 1;
             end
         end
     end
-    
+
+    //In x-heep architecture with the gating cell
     // // Clock enable logic
     // always_comb begin
     //     if (!en_i) begin
@@ -81,7 +79,7 @@ module clk_stepping (
     //         clk_en = (current_state == RUNNING);
     //     end
     // end
-    
+
     // // Instantiate the core-v-mini-mcu clock gate
     // tc_clk_gating clk_gate (
     //     .clk_i(clk_i),
@@ -89,7 +87,7 @@ module clk_stepping (
     //     .test_en_i(1'b0),
     //     .clk_o(clk_o)
     // );
-    
+
 
     assign clk_o = (current_state == RUNNING) ? clk_i : 1'b0;
     // Output assignments

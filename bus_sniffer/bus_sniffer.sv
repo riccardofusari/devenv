@@ -1,83 +1,17 @@
-
-
-  // -----------------------------
-  // OBI request/response structs
-  // -----------------------------
-  typedef struct packed {
-    logic        req;
-    logic        we;
-    logic [3:0]  be;
-    logic [31:0] addr;
-    logic [31:0] wdata;
-  } obi_req_t /*verilator public*/;
-
-  typedef struct packed {
-    logic        gnt;
-    logic        rvalid;
-    logic [31:0] rdata;
-  } obi_resp_t /*verilator public*/;
-
-  // -----------------------------
-  // Bundled signals
-  // -----------------------------
-  typedef struct packed {
-    // Core-related signals
-    obi_req_t  core_instr_req;
-    obi_resp_t core_instr_resp;
-    obi_req_t  core_data_req;
-    obi_resp_t core_data_resp;
-
-    // DMA-related signals
-    obi_req_t  dma_read_req;
-    obi_resp_t dma_read_resp;
-    obi_req_t  dma_write_req;
-    obi_resp_t dma_write_resp;
-    obi_req_t  dma_addr_req;
-    obi_resp_t dma_addr_resp;
-
-    // Peripherals
-    obi_req_t  ao_peripheral_slave_req;
-    obi_resp_t ao_peripheral_slave_resp;
-    obi_req_t  peripheral_slave_req;
-    obi_resp_t peripheral_slave_resp;
-
-    // RAM signals
-    obi_req_t [1:0]  ram_slave_req;
-    obi_resp_t [1:0] ram_slave_resp;
-
-    // Memory Map SPI Region
-    obi_req_t  flash_mem_slave_req;
-    obi_resp_t flash_mem_slave_resp;
-  } bus_sniff_bundle_t /*verilator public*/;
-
-  // -----------------------------
-  // Sniffer frame struct
-  // -----------------------------
-  typedef struct packed {
-    logic [7:0]  source_id;
-    logic [16:0] reserved;     // padding
-    logic [31:0] timestamp;
-    logic [31:0] address;
-    logic [31:0] data;
-    logic [3:0]  byte_enable;
-    logic        we;
-    logic        valid;
-    logic        gnt;
-  } sniffer_frame_t /*verilator public*/;
-
-
-
+//------------------------------------------------------------------------------
+// Bus Sniffer
+//------------------------------------------------------------------------------
 module bus_sniffer
+  import bus_sniffer_pkg::*;
 #(
     parameter int FRAME_WIDTH = 128,  // total bits to shift out
-    parameter int FIFO_DEPTH  = 32    // FIFO entries
+    parameter int FIFO_DEPTH  = 1024  // FIFO entries
 ) (
     input logic clk_i,
     input logic rst_ni,
     output logic sniffer_tdo_o,  // Output line carrying sniffed data, bit-serialized
     input bus_sniff_bundle_t bus_sniff_bundle_i  // The entire bus signals to be sniffed
 );
-
 
   //--------------------------------------------------------------------------
   // timestamp
@@ -575,14 +509,14 @@ module bus_sniffer
     shift_reg_t bits;
     bits = {
       f.source_id,  // [127:120] 8 bits
-      f.reserved,  // [119:103] 17 bits
       f.timestamp,  // [102 :71] 32 bits
       f.address,  // [70 :39 ] 32 bits
       f.data,  // [38 : 7 ] 
       f.byte_enable,  // [6  : 3 ] bits
       f.we,
       f.valid,
-      f.gnt
+      f.gnt,
+      f.reserved  // [119:103] 17 bits
     // total = 128 bits 
     };
     return bits;
