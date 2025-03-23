@@ -22,32 +22,34 @@ int main(int argc, char** argv, char** env) {
     dut->cycles_i = 0;
     dut->cycle_start_i = 0;
 
+    bool clock_started = false;
+    vluint64_t clock_start_time = 0;
+
     while (sim_time < MAX_SIM_TIME) {
-        dut->clk_i ^= 1;
+        // Toggle clock
+        dut->clk_i = (sim_time % 2 == 0) ? 0 : 1;
         dut->eval();
         m_trace->dump(sim_time);
 
         // Apply reset
-        if (sim_time < 10) {
+        if (sim_time < 2) {
             dut->rst_ni = 0;
-        } else if (sim_time == 10) {
+        } else if (sim_time == 2) {
             dut->rst_ni = 1;
         }
 
-        // Enable clock stepping mode and set cycles
-        if (sim_time == 20) {
+        // Enable clock stepping mode and start it on the first positive edge of the clock
+        if (sim_time == 4) {
             dut->en_i = 1;
             dut->cycles_i = 25;
-        }
-
-        // Start cycle count
-        if (sim_time == 30) {
             dut->cycle_start_i = 1;
         }
 
-        // Deassert cycle start
-        if (sim_time == 31) {
-            dut->cycle_start_i = 0;
+        // Check if the clock has started
+        if (dut->clk_o && !clock_started) {
+            clock_started = true;
+            clock_start_time = sim_time;
+            std::cout << "Clock started at time: " << clock_start_time << std::endl;
         }
 
         // Disable clock stepping mode before finishing
